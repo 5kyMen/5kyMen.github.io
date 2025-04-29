@@ -2,6 +2,7 @@
 
 @(require (for-label racket))
 @title{Ryan Raschkovsky}
+@image["pic.png" #:scale 0.5]
 
 @section{About Me:}
 
@@ -15,21 +16,21 @@ My Current @hyperlink["interests.html"]{Interests}
 I'm currently certified as an FCC Technician for Amateur Radio and am studying multiple languages
 including Greek, Japanese, Mandarin, and TokiPona.
 
-When I'm not working on cybersecurity projects, you can find me
-building drones, teaching Portuguese, or exploring 3D modeling and design!
+When I'm not working on Cybersecurity projects, you can find me
+building drones, teaching Portuguese, or Distrobution Hopping!
 
 @section{Projects}
 @para{Coming soon!}
 
 @section{What I am Currently Learning}
 @tabular[#:style 'boxed
-         #:sep @hspace[2]
-         (list (list "Languages (Programming):" "Network Security, Reverse Engineering,
- IoT Exploitation, OSINT")
+         #:sep @hspace[12]
+         (list (list "Languages (Programming):" "Haskell, COBOL, F#, & Pearl")
                (list "Languages (Spoken):" "Japanese, Mandarin, Hindi, Greek, & TokiPona")
-               (list "Theory & Concepts:" "Monadic ... ")
-               (list "Additional Topics:" "Amateur Radio (FCC Technician), Drone Building,
-3D Modeling"))]
+               (list "Theory & Concepts:"
+                     "Lambda Calculus, Monads - Functional Programming, & Category Theory")
+               (list "Additional Topics:" " 
+ General Class Radio License, CompTIA Security+, NIXOS, LFS  custom embedded Linux systems"))]
           
 
 @section{Contact}
