@@ -22,6 +22,13 @@ building drones, teaching Portuguese, or Distrobution Hopping!
 @section{Projects}
 @para{Coming soon!}
 
+@section{Dotfiles}
+
+@section{Slavov Lab}
+
+
+
+
 @section{What I am Currently Learning}
 @tabular[#:style 'boxed
          #:sep @hspace[12]
