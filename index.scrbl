@@ -12,17 +12,8 @@ where I am currently studying for a BA in Cybersecurity.
 
 My Current @hyperlink["interests.html"]{Interests}
 
-My interests include:
-@itemlist[
- @item{Network Security}
- @item{Reverse Engineering}
- @item{IoT Exploitation}
- @item{Amateur Radio}
- @item{Learning Languages}
- @item{OSINT}]
-
 I'm currently certified as an FCC Technician for Amateur Radio and am studying multiple languages
-including Portuguese, Japanese, Mandarin, and TokiPona.
+including Greek, Japanese, Mandarin, and TokiPona.
 
 When I'm not working on cybersecurity projects, you can find me
 building drones, teaching Portuguese, or exploring 3D modeling and design!
