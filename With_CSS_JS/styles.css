@@ -1,31 +1,24 @@
-/* CSS for ryanrasc.com */ 
-
+/* Basic reset and font settings */
 :root {
   --primary-color: #4a6fa5;
   --secondary-color: #6f9ceb;
-  --accent-color: #ffffff59;
-  --background-color: #d4d4d0;
-  --text-color: #262035;
+  --accent-color: #ff6b6b;
+  --background-color: #f8f9fa;
+  --text-color: #333333;
   --border-color: #dddddd;
-  --header-color: #aa541b;
-  --section-bg: #f9f9f9;
+  --header-color: #2c3e50;
+  --section-bg: #ffffff;
   --transition-speed: 0.3s;
+  --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark mode variables */
-.dark-mode {
-  --primary-color: #6f9ceb;
-  --secondary-color: #4a6fa5;
-  --accent-color: #ff8787;
-  --background-color: #1a1a1a;
-  --text-color: #f0f0f0;
-  --border-color: #444444;
-  --header-color: #a1c4fd;
-  --section-bg: #2a2a2a;
+/* Website style class (needed for Scribble) */
+.WebsiteStyle {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
@@ -34,19 +27,27 @@ body {
   margin: 0 auto;
   padding: 20px;
   transition: color var(--transition-speed), background-color var(--transition-speed);
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, var(--background-color), var(--section-bg));
 }
 
 /* Header styles */
-h1 {
-  font-size: 10.5em;
-  color: var(--primary-color);
-  border-bottom: 3px solid var(--accent-color);
-  padding-bottom: 10px;
-  text-align: center;
+h1, h2, h3, h4, h5, h6 {
   transition: color var(--transition-speed);
 }
 
 h2 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 10px;
+  text-align: center;
+  margin-bottom: 1.5em;
+  transition: color var(--transition-speed);
+}
+
+h3 {
   font-size: 1.8em;
   color: var(--header-color);
   margin-top: 1.5em;
@@ -55,7 +56,7 @@ h2 {
   transition: color var(--transition-speed), border-color var(--transition-speed);
 }
 
-h3 {
+h4 {
   font-size: 1.3em;
   color: var(--header-color);
   transition: color var(--transition-speed);
@@ -72,6 +73,20 @@ a {
 a:hover {
   color: var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
+}
+
+/* Main content styling */
+main {
+  background-color: var(--section-bg);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+p {
+  margin-bottom: 1.2em;
 }
 
 /* Lists */
@@ -98,9 +113,10 @@ a:hover {
   border-collapse: collapse;
   width: 100%;
   margin: 20px 0;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   border-radius: 8px;
   overflow: hidden;
+  transition: box-shadow var(--transition-speed);
 }
 
 .boxed tr:nth-child(even) {
@@ -115,12 +131,40 @@ a:hover {
 .boxed td, .boxed th {
   padding: 12px 15px;
   border: 1px solid var(--border-color);
-  transition: background-color var(--transition-speed);
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
 }
 
 /* Skills container */
 .skills-container {
   margin: 20px 0;
+}
+
+/* Skill bars */
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-bar {
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: background-color var(--transition-speed);
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  transition: width 1s ease-out, background-color var(--transition-speed);
 }
 
 /* Contact container */
@@ -151,7 +195,8 @@ a:hover {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, border-color var(--transition-speed);
+  background-color: var(--section-bg);
 }
 
 .collapsible-section:hover {
@@ -194,29 +239,6 @@ a:hover {
   padding: 15px;
 }
 
-/* Theme toggle button */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-#theme-toggle-btn {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-#theme-toggle-btn:hover {
-  background-color: var(--secondary-color);
-}
-
 /* Animation for page elements */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -231,3 +253,32 @@ section:nth-child(2) { animation-delay: 0.1s; }
 section:nth-child(3) { animation-delay: 0.2s; }
 section:nth-child(4) { animation-delay: 0.3s; }
 section:nth-child(5) { animation-delay: 0.4s; }
+
+/* Cursor for typing effect */
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  main {
+    padding: 15px;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+  }
+}

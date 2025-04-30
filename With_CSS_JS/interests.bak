@@ -1,0 +1,17 @@
+#lang scribble/manual
+
+@title{My PGP Public Key}
+
+@hyperlink["index.scrbl"]{← Back to main page}
+
+Below is my PGP public key:
+
+My interests include:
+@itemlist[
+  @item{Network Security}
+  @item{Reverse Engineering}
+  @item{IoT Exploitation}
+  @item{Amateur Radio}
+  @item{Learning Languages}
+  @item{OSINT}
+]
