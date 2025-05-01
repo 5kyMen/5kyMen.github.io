@@ -27,7 +27,7 @@ I'm currently certified as an FCC Technician for Amateur Radio and am studying m
 including Greek, Japanese, Mandarin, and TokiPona!
 
 When I'm not working on Cybersecurity projects, you can find me
-building drones, teaching Portuguese, or Distrobution Hopping!
+building drones, teaching Portuguese, or Distribution Hopping!
 
 @; @section{Projects}
 
