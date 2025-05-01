@@ -6,7 +6,6 @@
           scribble/html-properties
           scribble/latex-properties)
 
-@; Define a style for our custom styling
 @(define website-style
    (make-style "WebsiteStyle"
                (list (make-css-addition "css-file.css"))))
@@ -19,7 +18,7 @@
 
 Hello! My name is @bold{Ryan Raschkovsky}, and welcome to my website!
 
-I'm an undergraduate at Northeastern University in Boston,
+I'm an undwergraduate at Northeastern University in Boston,
 where I am currently studying for a BA in Cybersecurity.
 
 My Current @hyperlink["interests.html"]{Interests}
@@ -29,15 +28,12 @@ including Greek, Japanese, Mandarin, and TokiPona
 When I'm not working on Cybersecurity projects, you can find me
 building drones, teaching Portuguese, or Distrobution Hopping!
 
-@section{Projects}
-@para{Coming soon!}
+@; @section{Projects}
+@;@para{Coming soon!}
 
 @section{Dotfiles}
 
-@section{Slavov Lab}
-
-
-
+@;@section{Slavov Lab}
 
 @section{What I am Currently Learning}
 @tabular[#:style 'none

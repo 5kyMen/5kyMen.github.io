@@ -1,6 +1,16 @@
 #lang scribble/base
 
-@title{My PGP Public Key}
+@(require (for-label racket))
+
+@(require scribble/core
+          scribble/html-properties
+          scribble/latex-properties)
+
+@(define website-style
+   (make-style "WebsiteStyle"
+               (list (make-css-addition "css-file.css"))))
+
+@title[#:style website-style]{My PGP Public Key}
 
 @hyperlink["index.html"]{← Back to main page}
 
