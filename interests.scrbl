@@ -14,6 +14,8 @@
 
 @hyperlink["index.html"]{← Back to main page}
 
+@; Introduction 
+
 My Interests include:
 @itemlist[
   @item{Network Security}
@@ -22,5 +24,6 @@ My Interests include:
   @item{IoT Exploitation}
   @item{Amateur Radio}
   @item{Learning Languages}
+  @item{Check out my @hyperlink["photo.html"]{Dotfiles}
   @item{OSINT}
 ]

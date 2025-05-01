@@ -19,19 +19,22 @@
 Hello! My name is @bold{Ryan Raschkovsky}, and welcome to my website!
 
 I'm an undwergraduate at Northeastern University in Boston,
-where I am currently studying for a BA in Cybersecurity.
+where I am currently studying for a BS in Cybersecurity.
 
-My Current @hyperlink["interests.html"]{Interests}
+Check out my @hyperlink["current.html"]{life right now!}
 
 I'm currently certified as an FCC Technician for Amateur Radio and am studying multiple languages
-including Greek, Japanese, Mandarin, and TokiPona 
+including Greek, Japanese, Mandarin, and TokiPona!
+
 When I'm not working on Cybersecurity projects, you can find me
 building drones, teaching Portuguese, or Distrobution Hopping!
 
 @; @section{Projects}
+
 @;@para{Coming soon!}
 
-@section{Dotfiles}
+@section{@hyperlink["setup.html"]{My Setup}}
+
 
 @;@section{Slavov Lab}
 
@@ -43,7 +46,7 @@ building drones, teaching Portuguese, or Distrobution Hopping!
                (list "Theory & Concepts:"
                      "Lambda Calculus, Monads - Functional Programming, & Category Theory")
                (list "Additional Topics:" " 
- General Class Radio License, CompTIA Security+, NIXOS, LFS  custom embedded Linux systems"))]
+ General Class Radio License, CompTIA Security+, Linux From Scratch"))]
           
 
 @section{Contact}
@@ -53,7 +56,7 @@ Feel free to reach out to me!
 @tabular[#:style 'none
          (list 
           (list @image["email-icon.png" #:scale 0.12]{}
-                @hyperlink["mailto:ryanraschkovsky@gmail.com"]{Email})
+                @hyperlink["mailto:raschkovsky.r@northeastern.edu"]{Email})
           (list @image["linkedin-icon.png" #:scale 0.12]{}
                 @hyperlink["https://www.linkedin.com/in/ryan-rasch-664267273/"]{LinkedIn})
           (list @image["QRZ-icon.png" #:scale 0.12]{}

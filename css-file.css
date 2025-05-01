@@ -14,17 +14,17 @@
 
 body {
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Brush Script MT", cursives;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 25px;
   transition: color var(--transition-speed), background-color var(--transition-speed);
 }
 
-/* Header styles */
+/* Headers */
 h1 {
   font-size: 10.5em;
   color: var(--primary-color)s;

@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname current) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+#reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname dotfiles) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 #lang scribble/base
 
 @(require (for-label racket))
@@ -13,4 +13,6 @@
    (make-style "WebsiteStyle"
                (list (make-css-addition "css-file.css"))))
 
-@title[#:style website-style]{What I am currently working on:}
+@title[#:style website-style]{Dotfiles}
+
+@hyperlink["index.html"]{← Back to main page}
