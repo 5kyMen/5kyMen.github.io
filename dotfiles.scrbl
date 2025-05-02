@@ -12,4 +12,4 @@
 
 @title[#:style website-style]{Dotfiles}
 
-@hyperlink["index.html"]{← Back to main page}
+@hyperlink["current.html"]{← Back to main page}
