@@ -10,7 +10,7 @@
    (make-style "WebsiteStyle"
                (list (make-css-addition "css-file.css"))))
 
-@title[#:style website-style]{Ryan Raschkovsky}
+@title[#:style website-style]{Welcome to @hyperlink["https://ryanrasc.com"]{ryanrasc.com}}
 
 @image["pic.png" #:scale 0.5]
 
@@ -21,33 +21,23 @@ Hello! My name is @bold{Ryan Raschkovsky}, and welcome to my website!
 I'm an undwergraduate at Northeastern University in Boston,
 where I am currently studying for a BS in Cybersecurity.
 
-Check out what @hyperlink["current.html"]{I've been up to!}
-
 I'm currently certified as an FCC Technician for Amateur Radio and am studying multiple languages
 including Greek, Japanese, Mandarin, and TokiPona!
 
+Here's where you can check out what @hyperlink["current.html"]{I've been up to!}
+
 When I'm not working on Cybersecurity projects, you can find me
 building drones, teaching Portuguese, or Distribution Hopping!
+
+
+Also, take a look at @hyperlink["setup.html"]{my setup} if you're interested!
 
 @; @section{Projects}
 
 @;@para{Coming soon!}
 
-@section{@hyperlink["setup.html"]{My Setup}}
-
 
 @;@section{Slavov Lab}
-
-@section{What I am Currently Learning}
-@tabular[#:style 'none
-         #:sep @hspace[5]
-         (list (list "Languages (Programming):" "Haskell, COBOL, F#, & Pearl")
-               (list "Languages (Spoken):" "Japanese, Mandarin, Hindi, Greek, & TokiPona")
-               (list "Theory & Concepts:"
-                     "Lambda Calculus, Monads - Functional Programming, & Category Theory")
-               (list "Additional Topics:" " 
- General Class Radio License, CompTIA Security+, Linux From Scratch"))]
-          
 
 @section{Contact}
 
