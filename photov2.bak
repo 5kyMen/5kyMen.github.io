@@ -1,0 +1,29 @@
+#lang scribble/base
+@; Photography
+
+@(require (for-label racket))
+
+@(require scribble/core
+          scribble/html-properties
+          scribble/latex-properties
+          (for-syntax racket/base racket/syntax))
+
+@(define website-style
+   (make-style "WebsiteStyle"
+               (list (make-css-addition "css-file.css"))))
+
+@(define-syntax (make-photo-hyperlink stx)
+   (syntax-case stx ()
+     [(_ photo-number)
+      #'(hyperlink (format "pictures/~a.jpg" photo-number)
+                  (image (format "pictures/descaled/~a_descaled.jpg" photo-number)
+                         '()))]))
+
+@title[#:style website-style]{Photography}
+
+@hyperlink["index.html"]{← Back to main page} @; back to prior 
+
+@section{Click to see image in full resolution}
+  @make-photo-hyperlink{1}
+  @make-photo-hyperlink{2}
+  @make-photo-hyperlink{3}

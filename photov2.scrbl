@@ -21,10 +21,9 @@
 
 @title[#:style website-style]{Photography}
 
-@hyperlink["current.html"]{← Back to last page}
+@hyperlink["index.html"]{← Back to main page}
 
 @section{Click to see image in full resolution}
-
   @make-photo-hyperlink{1}
   @make-photo-hyperlink{2}
   @make-photo-hyperlink{3}
@@ -49,11 +48,42 @@
   @make-photo-hyperlink{22}
   @make-photo-hyperlink{23}
   @make-photo-hyperlink{24}
+  @make-photo-hyperlink{10}
+  @make-photo-hyperlink{11}
+  @make-photo-hyperlink{12}
+  @make-photo-hyperlink{13}
+  @make-photo-hyperlink{14}
+  @make-photo-hyperlink{15}
+  @make-photo-hyperlink{16}
+  @make-photo-hyperlink{17}
+  @make-photo-hyperlink{18}
+  @make-photo-hyperlink{19}
+  @make-photo-hyperlink{20}
+  @make-photo-hyperlink{21}
+  @make-photo-hyperlink{22}
+  @make-photo-hyperlink{23}
+  @make-photo-hyperlink{24}
+  @make-photo-hyperlink{10}
+  @make-photo-hyperlink{11}
+  @make-photo-hyperlink{12}
+  @make-photo-hyperlink{13}
+  @make-photo-hyperlink{14}
+  @make-photo-hyperlink{15}
+  @make-photo-hyperlink{16}
+  @make-photo-hyperlink{17}
+  @make-photo-hyperlink{18}
+  @make-photo-hyperlink{19}
+  @make-photo-hyperlink{20}
+  @make-photo-hyperlink{21}
+  @make-photo-hyperlink{22}
+  @make-photo-hyperlink{23}
+  @make-photo-hyperlink{24}
   @make-photo-hyperlink{25}
   @make-photo-hyperlink{26}
   @make-photo-hyperlink{27}
   @make-photo-hyperlink{28}
   @make-photo-hyperlink{29}
+        
   @make-photo-hyperlink{30}
   @make-photo-hyperlink{31}
   @make-photo-hyperlink{32}
@@ -67,3 +97,4 @@
   @make-photo-hyperlink{40}
   @make-photo-hyperlink{41}
   @make-photo-hyperlink{42}
+

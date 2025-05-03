@@ -20,7 +20,6 @@
   @item{Embedded Device and IoT exploitation}
   @item{Active Directory DS (Kerberoasting and DCSync)}
   @item{OSINT (Mostly in the area of Geolocation and Imagery Intelligence)}
-  @item{Packet Analysis}
 ]
 
 @itemlist[
