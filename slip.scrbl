@@ -20,14 +20,13 @@ Hello!
 Welcome to a project I am currently working on, SLIP, which stands for Street Level Image Processing.
 
 This project focuses on developing a  system for Open Source Intelligence (OSINT) gathering
-through Image Processing Techniques, that I became interested in through the game @hyperlink["https://geoguessr.com"]{GeoGuessr}
+through Image Processing Techniques, which I became interested in through the game @hyperlink["https://geoguessr.com"]{GeoGuessr}.
 The purpose is to identify geographic locations by analyzing distinctive infrastructure features
 that vary between regions and countries.
-The system employs advanced computer vision and machine learning techniques to extract and analyze geographical infrastructure:
-
-
-@; Explination (what it does) *** WHAT IS OSINT ***
-   @;Why I am Building this
+The system employs image processing and machine learning
+  techniques to determine the geographical location from often overlooked street-side data. Existing implementations such as 
+  GeoSpy or PicartaAI overly rely on large amounts of training data from satalite imagery such as Google Street view, whereas
+my attempt will begin to understand common streetside patterns as a way of abstracting through a more efficent algorithm. 
 
 @; Design Document 
 @; Casual and calm about it; dont explain too much 

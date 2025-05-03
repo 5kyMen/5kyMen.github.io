@@ -16,14 +16,16 @@
 
 @section{My Current Academic Interests:}
 @itemlist[
- @item{I am mostly interested in @bold{Reverse Engineering}. Currently, I am working on a deconstruction ofWindows XP Solitare for a
+ @item{I am mostly interested in @bold{Reverse Engineering}. Currently, I am working on a deconstruction of Windows XP Solitaire for a
   personalized scoring system, defined victory path, and manipulation of the reward system} @; XP SOLITARE HERE ;@
  @item{I have gotten into @bold{Embedded Device} and @bold{IoT exploitation}, and have been deconstructing routers, cameras,
-  and an Amazon Alexa for root access to develop my own custom firmware.}
+  and Smart Home voice assistants for root access to develop custom firmware.}
  @;@item{Active Directory DS (Kerberoasting and DCSync)}
- @item{I have been overly intersted in @bold{OSINT} (Mostly in the area of Geolocation and Imagery Intelligence) @; EXPLAIN MORE HERE!
-  I am also currently writing an OSINT tool called @hyperlink["slip.html"]{SLIP}, which is the area of OpenSourceIntelligance}]
-
+ @item{I have been overly interested in @hyperlink["https://www.osintframework.com/"]{@bold{OSINT }}
+  (Mostly in the area of Geolocation and Imagery Intelligence) @; EXPLAIN MORE HERE!
+  I am also currently writing an OSINT tool called @hyperlink["slip.html"]{SLIP}, which uses specialized image processing and machine learning
+  techniques to determine geographical location from often overlooked street-side data. 
+}]
 @itemlist[
  @item{I @bold{program} in Python, Racket, Java, JavaScript, HTML, C, ASM, LaTeX, and Emacs-Lisp. I would love for you to take a look at
   my @bold{ShackChat Protocol Client} written in both:
@@ -34,9 +36,8 @@
  @item{I like @bold{Operating Systems} such as Windows, Mac, Linux, Plan9, and TempleOS}
  @item{I am also currently building my custom @bold{@hyperlink["lfs.html"]{embedded Linux system}} with
   @hyperlink["https://www.linuxfromscratch.org/lfs/"]{LFS} (Linux from Scratch)}
- @item{I have been working for quite some time on @bold{Distributed Systems Security}
-  and @bold{Networking}, where I am have learned about areas such as Protocols, Firewalls, and
-  encryption techniques, both in personal and client systems.}
+ @item{I have been working for quite some time on @bold{Network Security}, where I have learned
+  about areas such as Protocols, Firewalls, and encryption techniques, both in consumer-grade and enterprise systems.}
  @item{Currently, I am working with reaserchers
   at @bold{Northeastern's @hyperlink["https://slavovlab.net/"]{Slavov Lab}} for Single-cell proteome as a Networking
   and Systems consultant. There, I configure servers for Mass Spectrometry data in the area of @bold{protein synthesis}.}
@@ -74,6 +75,6 @@ N5 Japanese Language Proficiency Exam"))]
 
 @; Slavov
 @section{Photography}
-Check out my @hyperlink["photo.html"]{Photography}.
+Check out my @hyperlink["photo.html"]{Photography}
 @linebreak[]
 This is a collection of photos taken from 2024-2025 on my @hyperlink["https://www.canon.com.au/cameras/eos-3000d"]{Canon EOS 3000D}
