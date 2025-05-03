@@ -1,0 +1,20 @@
+#lang scribble/base
+
+@; Purpose and why I am doing it - I dont feel confident with modern systems;
+@; Older systems had many benifits that were lost in time -> Throw in Plan9 (like the intereface),
+@; tribblix
+
+
+@; Recently installed Gentoo - Learning the process of how linux systems are constructed and what goes into them
+@; Use this as a precursor to the specific changes and utilities you want to implement 
+@; 
+@; Bored with Linux - too easy - have fun and learn as a challenge
+@; I want to create (dont talk about learning) something of value and something that appeals to both
+@; Advanced functionality and a user defined learning process ;
+@;    You can go into the telementry between everything the Solaris and say how you want to reimplement that
+@;    Or you can go into the
+@; speak on the: @hyperlink[https://oracle.com/technical-resources/articles/solaris11/
+          @;  introduction-to-ips.html]{IPS from Solaris}
+
+
+@; For this, I want to 

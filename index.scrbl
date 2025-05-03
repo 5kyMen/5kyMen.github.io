@@ -18,19 +18,19 @@
 
 Hello! My name is @bold{Ryan Raschkovsky}, and welcome to my website!
 
-I'm an undwergraduate at Northeastern University in Boston,
+I'm an undergraduate at Northeastern University in Boston,
 where I am currently studying for a BS in Cybersecurity.
 
 I'm currently certified as an FCC Technician for Amateur Radio and am studying multiple languages
 including Greek, Japanese, Mandarin, and TokiPona!
 
-Here's where you can check out what @hyperlink["current.html"]{I've been up to!}
+Here's where you can check out what @hyperlink["current.html"]{I'm working on}
 
 When I'm not working on Cybersecurity projects, you can find me
 building drones, teaching Portuguese, or Distribution Hopping!
 
 
-Also, take a look at @hyperlink["setup.html"]{my setup} if you're interested!
+@; Also, take a look at @hyperlink["setup.html"]{my setup} if you're interested!
 
 @; @section{Projects}
 
@@ -53,3 +53,7 @@ Feel free to reach out to me!
                 @hyperlink["https://www.qrz.com/db/KC1WDR"]{QRZ Page})
           (list @image["pgp-icon.png" #:scale 0.12]{}
                 @hyperlink["pgp.html"]{My PGP Public Key}))]
+
+
+@verbatim{This site was written in Scribble, a Racket based DSL. Check out the language @hyperlink["https://docs.racket-lang.org/scribble/getting-started.html"]{here}}
+@hyperlink["http://www.catb.org/hacker-emblem/"]{@image["emb.png"]{}}

@@ -14,67 +14,66 @@
 
 @title[#:style website-style]{My Life Right Now:}
 
-@section{Academic Interests:}
+@section{My Current Academic Interests:}
 @itemlist[
-  @item{Reverse Engineering (Malware and Video Games)} @; XP SOLITARE HERE 
-  @item{Embedded Device and IoT exploitation}
-  @item{Active Directory DS (Kerberoasting and DCSync)}
-  @item{OSINT (Mostly in the area of Geolocation and Imagery Intelligence)}
-]
+ @item{I am mostly interested in @bold{Reverse Engineering}. Currently, I am working on a deconstruction ofWindows XP Solitare for a
+  personalized scoring system, defined victory path, and manipulation of the reward system} @; XP SOLITARE HERE ;@
+ @item{I have gotten into @bold{Embedded Device} and @bold{IoT exploitation}, and have been deconstructing routers, cameras,
+  and an Amazon Alexa for root access to develop my own custom firmware.}
+ @;@item{Active Directory DS (Kerberoasting and DCSync)}
+ @item{I have been overly intersted in @bold{OSINT} (Mostly in the area of Geolocation and Imagery Intelligence) @; EXPLAIN MORE HERE!
+  I am also currently writing an OSINT tool called @hyperlink["slip.html"]{SLIP}, which is the area of OpenSourceIntelligance}]
 
 @itemlist[
-  @item{Programming: Python, Racket, Java, JavaScript, HTML, C, ASM, LaTeX, and Emacs-Lisp}
-  @item{Operating Systems: Windows, Mac, Linux, Plan9, & TempleOS; Building/Deploying custom embedded Linux systems}
-  @item{Security and Networking: Protocols, Firewalls, and encryption techniques in personal and client systems}
-]
+ @item{I @bold{program} in Python, Racket, Java, JavaScript, HTML, C, ASM, LaTeX, and Emacs-Lisp. I would love for you to take a look at
+  my @bold{ShackChat Protocol Client} written in both:
+  @hyperlink["9shat.html"]{The Plan 9 Nonstandard C Dialect} 
+  &
+  @hyperlink["shat.html"]{The Racket (PLT Scheme) Programming Langauge}
+ }
+ @item{I like @bold{Operating Systems} such as Windows, Mac, Linux, Plan9, and TempleOS}
+ @item{I am also currently building my custom @bold{@hyperlink["lfs.html"]{embedded Linux system}} with
+  @hyperlink["https://www.linuxfromscratch.org/lfs/"]{LFS} (Linux from Scratch)}
+ @item{I have been working for quite some time on @bold{Distributed Systems Security}
+  and @bold{Networking}, where I am have learned about areas such as Protocols, Firewalls, and
+  encryption techniques, both in personal and client systems.}
+ @item{Currently, I am working with reaserchers
+  at @bold{Northeastern's @hyperlink["https://slavovlab.net/"]{Slavov Lab}} for Single-cell proteome as a Networking
+  and Systems consultant. There, I configure servers for Mass Spectrometry data in the area of @bold{protein synthesis}.}
+ ]
 
 @section{Non-Academic Interests:}
 
 @itemlist[
-  @item{Radio Operation: Amateur Technician Certification and Radio volunteer for
-  2025 Boston Marathon - Assigned to Medical Sweep 8}
-  @item{Language/Linguistics: I speak Portuguese, English, and Spanish. I have also been
-  getting pretty good at Japanese, & Greek}
-  @item{I am also a teacher/ambassador for the @hyperlink["https://www.instagram.com/nucalls/"]{NUCALLS}
-  club at Northeastern!}
-  @item{I also enjoy design like:
-  @hyperlink["photo.html"]{Photography},
-  3D Modeling,
-  @hyperlink["art/hand.jpg"]{WhiteBoard Art},
-  Wood Burning, 
-  @hyperlink["art/arch.jpg"]{ Architecture}
-  @hyperlink["art/ascii.png"]{ASCII Art},
-  Vector Art,
+ @item{I am very involved with @bold{Radio Operation}, especially at my local radio club (W1KBN) NUWireless.
+  I am certified as an Amateur Technician (see QRZ page below) and am a radio volunteer for the
+  2025 Boston Marathon, where I was assigned to a Medical Sweep team}
+ @item{I have a strong passion for @bold{Languages}.I speak Portuguese, English, and Spanish. I am currently studying
+  Japanese, & Greek, to where I have Studied abroad in Thessaloniki, Greece for 4 months}
+ @item{I am also a teacher/ambassador for the @bold{  @hyperlink["https://www.instagram.com/nucalls/"]{NUCALLS} Club} at Northeastern!}
+ @item{I am also very interested in pretty much every area of @bold{design} like: Graphic Design / Digital Art, 3D Modeling, Architecture, ASCII Art,
   & Typography}]
+
+@; ADD ART PAGE
 
 @; Resources and Tutorials -> Extensions Upload Using Marker
 
 @; Introduction to Current
 
-@section{What I am Currently learning}
+@section{Topics I am Currently interested in:}
+Here's my current rabbit hole, feel free to talk to me about any of these topics!
 @tabular[#:style 'none
          #:sep @hspace[5]
          (list (list "Programming:" "Haskell, COBOL, F#, & Pearl")
                (list "Languages:" "Japanese, Mandarin, Hindi, Greek, & TokiPona")
                (list "Concepts:"
-                     "Lambda Calculus, Monads - Functional Programming, & Category Theory")
-               (list "Additional Topics:" " 
- General Class Radio License, CompTIA Security+, Linux From Scratch"))]
-
-@section{Shack Protocol Client}
-
-
-Check out my @bold{ShackChack Protocol Chat Client} written in both:
-@linebreak[]
-@hyperlink["9shat.html"]{The Plan 9 Nonstandard C Dialect} 
-@linebreak[]
-@hyperlink["shat.html"]{The Racket (PLT Scheme) Programming Langauge}
-
-@section{SLIP}
-
+                     "Lambda Calc, Functional Programming, & Category Theory")
+               (list "Additionally:" "
+ I am studying for my General Class Radio License, CompTIA Security+, and
+N5 Japanese Language Proficiency Exam"))]
 
 @; Slavov
-
-
-
-@; LFS - Give plan and 
+@section{Photography}
+Check out my @hyperlink["photo.html"]{Photography}.
+@linebreak[]
+This is a collection of photos taken from 2024-2025 on my @hyperlink["https://www.canon.com.au/cameras/eos-3000d"]{Canon EOS 3000D}
