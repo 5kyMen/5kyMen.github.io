@@ -61,7 +61,7 @@
 @; Introduction to Current
 
 @section{Topics I am Currently interested in:}
-Here's my current rabbit hole, feel free to talk to me about any of these topics!
+Here are my current topics of interest, so feel free to talk to me about any of these!
 @tabular[#:style 'none
          #:sep @hspace[5]
          (list (list "Programming:" "Haskell, COBOL, F#, & Pearl")
