@@ -65,7 +65,8 @@
 Here are my current topics of interest, so feel free to talk to me about any of these!
 @tabular[#:style 'none
          #:sep @hspace[5]
-         (list (list "Programming:" "Haskell, COBOL, F#, & Pearl")
+         (list (list "Programming:" "Haskell, COBOL, Rust, Typescript, & Pearl")
+                    @;  @hyperlink["https://nokia.com/bell-labs/about/dennis-m-ritchie/bintro.html"]{B})
                (list "Languages:" "Japanese, Mandarin, Hindi, Greek, & TokiPona")
                (list "Concepts:"
                      "Lambda Calc, Functional Programming, & Category Theory")
