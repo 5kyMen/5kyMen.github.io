@@ -266,6 +266,6 @@ section:nth-child(5) { animation-delay: 0.4s; }
     text-indent: initial;
     unicode-bidi: isolate;
     border-spacing: 100spx;
-    border-color: gray;
+    border-color: rgb(129, 126, 126);
 }
 }
