@@ -55,5 +55,5 @@ Feel free to reach out to me!
                 @hyperlink["pgp.html"]{My PGP Public Key}))]
 
 
-@verbatim{This site was written in Scribble, a Racket based DSL. Check out the language @hyperlink["https://docs.racket-lang.org/scribble/getting-started.html"]{here}}
+@verbatim{This site was written in Scribble. Check out the language @hyperlink["https://docs.racket-lang.org/scribble/getting-started.html"]{here}}
 @hyperlink["http://www.catb.org/hacker-emblem/"]{@image["emb.png"]{}}

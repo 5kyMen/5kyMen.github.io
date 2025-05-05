@@ -25,7 +25,7 @@
 
 @section{Click to see image in full resolution}
 
-  @make-photo-hyperlink{1}
+  @make-photo-hyperlink{43}
   @make-photo-hyperlink{2}
   @make-photo-hyperlink{3}
   @make-photo-hyperlink{4}
