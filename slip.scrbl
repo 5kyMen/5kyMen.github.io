@@ -31,9 +31,9 @@ my attempt will begin to understand common streetside patterns as a way of abstr
 @; Design Document 
 @; Casual and calm about it; dont explain too much 
 
-@image["bollard.jpg"]{}
-@linebreak[]
-@image["geo.png" #:scale 0.46]{}
+@image["bollard.jpg" #:scale 0.85]{}
+
+@image["geo.png" #:scale 0.3925]{}
 
 You can read the design document @hyperlink["slip.pdf"]{here}
 

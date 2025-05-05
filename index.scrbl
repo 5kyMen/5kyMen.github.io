@@ -52,7 +52,7 @@ Feel free to reach out to me!
           (list @image["QRZ-icon.png" #:scale 0.12]{}
                 @hyperlink["https://www.qrz.com/db/KC1WDR"]{QRZ Page})
           (list @image["pgp-icon.png" #:scale 0.12]{}
-                @hyperlink["pgp.html"]{My PGP Public Key}))]
+                @hyperlink["pgp.html"]{PGP Key}))]
 
 
 @verbatim{This site was written in Scribble. Check out the language @hyperlink["https://docs.racket-lang.org/scribble/getting-started.html"]{here}}

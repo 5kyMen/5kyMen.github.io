@@ -31,7 +31,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -88,6 +88,21 @@ a:hover {
   width: 1em;
   margin-left: -1em;
 }
+
+.tocviewlink {
+  text-decoration: none;
+  color: rgb(115, 76, 25) !important;
+}
+
+.tocviewsublistonly {
+  margin-left: 0.4em;
+  border-left: 2px solid rgb(115, 76, 25) !important;
+  padding-left: 0.8em;
+}
+
+img {
+    box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+      border-radius: 10px;}
 
 .boxed {
   border-collapse: collapse;
@@ -181,18 +196,19 @@ a:hover {
   padding: 0 15px;
 }
 
-
+/* TOC CSS */
 .tocview, .tocsub{
   text-align: left;
   margin-top: 0.5em;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 30px;
   width: 120%;
-  background-color: #e1d0bc;
+  background-color: #f8dfca;
   border: 2px solid #643b1d;
-  font-size: 1.15em;                     
-  }
+  font-size: 1.15em;  
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 
+  }
 
 .tocviewselflink {
   text-decoration: underline;
@@ -246,6 +262,10 @@ section:nth-child(3) { animation-delay: 0.2s; }
 section:nth-child(4) { animation-delay: 0.3s; }
 section:nth-child(5) { animation-delay: 0.4s; }
 
+table img {
+  box-shadow: none !important;
+}
+
 @media screen and (max-width: 768px) {
   .tocview, .tocsub {
     display: none; 
@@ -263,9 +283,14 @@ section:nth-child(5) { animation-delay: 0.4s; }
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
-    text-indent: initial;
+    padding-left: 70px;
+    text-indent: -8px;
     unicode-bidi: isolate;
     border-spacing: 100spx;
     border-color: rgb(129, 126, 126);
 }
+  table img {
+    padding-left: 140px;
+  }
+
 }
