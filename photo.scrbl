@@ -15,7 +15,7 @@
 @(define-syntax (make-photo-hyperlink stx)
    (syntax-case stx ()
      [(_ photo-number)
-      #'(hyperlink (format "pictures/~a.jpg" photo-number)
+      #'(hyperlink (format "pictures/~a.JPG" photo-number)
                   (image (format "pictures/descaled/~a_descaled.jpg" photo-number)
                          '()))]))
 
