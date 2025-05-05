@@ -46,7 +46,7 @@ h1 {
 h2 {
   font-size: 2em;
   color: var(--header-color);
-  margin-top: 1.5em;
+  margin-top: 0.5em;
   border-left: 5px solid var(--primary-color);
   padding-left: 10px;
   transition: color var(--transition-speed), border-color var(--transition-speed);
@@ -196,19 +196,42 @@ img {
   padding: 0 15px;
 }
 
-/* TOC CSS */
-.tocview, .tocsub{
+/* Table of Contents <- Fix in Viewport */
+.tocview, .tocsub {
   text-align: left;
-  margin-top: 0.5em;
+  padding-left: 15px;
+  margin-top: 1.8em;
   margin-left: auto;
   margin-right: 30px;
-  width: 120%;
-  background-color: #f8dfca;
-  border: 2px solid #643b1d;
+  width: 130%;
+  background-color: #f7e1cc;
+  border: .5px solid #c09779;
   font-size: 1.15em;  
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px rgba(10, 10, 10, 15);
+  resize: horizontal;
+  overflow: auto;
+  
+  top: 20px; 
+  z-index: 100; 
+  
+  min-width: 155px;
+  max-width: 250px;
+  opacity: .8;
+  border-radius: 10px;
+  
+  transition: opacity 0.3 ease;
+}
 
-  }
+.tocview:hover, .tocsub:hover {
+  opacity: 1;
+  border: 1.8px solid #c09b79;
+  box-shadow: 0 0 2px rgba(10, 10, 10, 15);
+
+}
+
+.tocsub {
+  height: 100%;
+}
 
 .tocviewselflink {
   text-decoration: underline;
@@ -219,6 +242,14 @@ img {
 text-decoration: none;
   color: #8b4513;
   font-size: 75%;
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-radius: 4px;
+  border-bottom: 1px solid var(--text-color);
+  border-radius: 1px;
 }
 
 .collapsible-content.active {
