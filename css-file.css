@@ -4,7 +4,7 @@
   --primary-color: #50241c;
   --secondary-color: #ffffff;
   --accent-color: #fcdfbb;
-  --background-color: #fff5ec;
+  --background-color: #f7e2d0;
   --text-color: #2c1b0d;
   --border-color: #dddddd;
   --header-color: #55432e;
@@ -14,17 +14,26 @@
 
 body {
 
-  font-family: "Brush Script MT", cursives;
+  font-family: Times, Times New Roman, serif	;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
-  padding: 25px;
+  padding: 20px;
   transition: color var(--transition-speed), background-color var(--transition-speed);
 }
 
-/* Headers */
+.maincolumn {
+  background-color: var(--background-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 h1 {
   font-size: 10.5em;
   color: var(--primary-color)s;
@@ -49,7 +58,6 @@ h3 {
   transition: color var(--transition-speed);
 }
 
-/* Links */
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -62,7 +70,7 @@ a:hover {
   border-bottom: 1px solid var(--accent-color);
 }
 
-/* Lists */
+
 .itemlist {
   padding-left: 20px;
 }
@@ -81,7 +89,6 @@ a:hover {
   margin-left: -1em;
 }
 
-/* Tables */
 .boxed {
   border-collapse: collapse;
   width: 100%;
@@ -106,12 +113,10 @@ a:hover {
   transition: background-color var(--transition-speed);
 }
 
-/* Skills container */
 .skills-container {
   margin: 40px 0;
 }
 
-/* Contact container */
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -133,7 +138,6 @@ a:hover {
   transform: scale(1.1);
 }
 
-/* Collapsible sections */
 .collapsible-section {
   margin-bottom: 15px;
   border: 1px solid var(--border-color);
@@ -177,12 +181,35 @@ a:hover {
   padding: 0 15px;
 }
 
+
+.tocview, .tocsub{
+  text-align: left;
+  margin-top: 0.5em;
+  margin-left: auto;
+  margin-right: 20px;
+  width: 120%;
+  background-color: #e1d0bc;
+  border: 2px solid #643b1d;
+  font-size: 1.15em;                     
+  }
+
+
+.tocviewselflink {
+  text-decoration: underline;
+  color: rgb(92, 43, 3);
+}
+
+.tocviewtoggle {
+text-decoration: none;
+  color: #8b4513;
+  font-size: 75%;
+}
+
 .collapsible-content.active {
   max-height: 500px;
   padding: 15px;
 }
 
-/* Theme toggle button */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -205,7 +232,6 @@ a:hover {
   background-color: var(--secondary-color);
 }
 
-/* Animation for page elements */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -219,3 +245,27 @@ section:nth-child(2) { animation-delay: 0.1s; }
 section:nth-child(3) { animation-delay: 0.2s; }
 section:nth-child(4) { animation-delay: 0.3s; }
 section:nth-child(5) { animation-delay: 0.4s; }
+
+@media screen and (max-width: 768px) {
+  .tocview, .tocsub {
+    display: none; 
+  }
+  
+  body, body * {
+    text-align: center !important;
+  }
+
+  h2 {
+    border-left: none;
+    padding-left: 0;
+  }
+  table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 100spx;
+    border-color: gray;
+}
+}
