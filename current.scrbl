@@ -49,7 +49,7 @@
  @item{I am very involved with @bold{Radio Operation}, especially at my local radio club (W1KBN) NUWireless.
   I am certified as an Amateur Technician (see QRZ page below) and am a radio volunteer for the
   2025 Boston Marathon, where I was assigned to a Medical Sweep team}
- @item{I have a strong passion for @bold{Languages}.I speak Portuguese, English, and Spanish. I am currently studying
+ @item{I have a strong passion for @bold{Languages}. I speak Portuguese, English, and Spanish. I am currently studying
   Japanese, & Greek, to where I have Studied abroad in Thessaloniki, Greece for 4 months}
  @item{I am also a teacher/ambassador for the @bold{  @hyperlink["https://www.instagram.com/nucalls/"]{NUCALLS} Club} at Northeastern!}
  @item{I am also very interested in pretty much every area of @bold{design} like: Graphic Design / Digital Art, 3D Modeling, Architecture, ASCII Art,
