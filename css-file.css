@@ -298,14 +298,20 @@ table img {
   box-shadow: none !important;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 950px) {
   .tocview, .tocsub {
     display: none; 
   }
-  
+
+  .maincolumn {
+    width: 90%;
+    height: 90%;
+  }  
+
   body, body * {
     text-align: center !important;
   }
+
 
   h2 {
     border-left: none;
@@ -316,7 +322,7 @@ table img {
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
-    padding-left: 70px;
+    padding-left: 18px;
     text-indent: -8px;
     unicode-bidi: isolate;
     border-spacing: 100spx;
@@ -325,5 +331,6 @@ table img {
   table img {
     padding-left: 140px;
   }
+  
 
 }
