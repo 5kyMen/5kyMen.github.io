@@ -1,4 +1,4 @@
- #lang racket
+#lang racket
 ; Shack Chat
 
 (require racket/tcp)
@@ -15,7 +15,7 @@
 
 (define (str->msg str)
   (local [(define splitmsg
-      (split-index str (findchar str 0)))]
+            (split-index str (findchar str 0)))]
     (message (car splitmsg) (cdr splitmsg))))
      
 (define (readmsg in)
@@ -23,11 +23,13 @@
 
 (define URL "127.0.0.1") ; PUT URL HERE
 (define PORT 44444) ; PUT PORT NUMBER HERE
+
 (define (connect)
   (displayln "Please update URL and PORT before connecting.")
-  (with-handlers ([exn:fail? (lambda (e) 
-                               (displayln "Connection failed. Make sure URL and PORT are correct.")
-                               (exit))])
+  (with-handlers ([exn:fail?
+                   (lambda (e) 
+                     (displayln "Connection failed. Make sure URL and PORT are correct.")
+                     (exit))])
     (tcp-connect URL PORT)))
 
 (define-values (in out) (connect))
@@ -39,10 +41,10 @@
 (send-name "Name" out) ; ENTER NAME HERE 
 
 (define (read-loop in-port)
-   (local
-       [(define msg
-          (readmsg in-port))]
-   (printf "<~a> ~a\n" (message-name msg) (message-text msg)))
+  (local
+    [(define msg
+       (readmsg in-port))]
+    (printf "<~a> ~a\n" (message-name msg) (message-text msg)))
   (read-loop in-port))
 
 (thread (thunk
