@@ -13,7 +13,6 @@
 }
 
 body {
-
   font-family: Times, Times New Roman, serif	;
   line-height: 1.6;
   color: var(--text-color);
@@ -102,7 +101,8 @@ a:hover {
 
 img {
     box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
-      border-radius: 10px;}
+      border-radius: 10px;
+}
 
 .boxed {
   border-collapse: collapse;
@@ -222,6 +222,7 @@ img {
   transition: opacity 0.3 ease;
 }
 
+
 .tocview:hover, .tocsub:hover {
   opacity: 1;
   border: 1.8px solid #c09b79;
@@ -310,6 +311,7 @@ table img {
     border-left: none;
     padding-left: 0;
   }
+  
   table {
     display: table;
     border-collapse: separate;
