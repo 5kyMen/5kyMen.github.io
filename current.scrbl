@@ -62,7 +62,7 @@
 @; Introduction to Current
 
 @section{Topics I am Currently interested in:}
-Here are my current topics of interest, so feel free to talk to me about any of these!
+Here are my @bold{current topics of interest}, so feel free to talk to me about any of these!
 @tabular[#:style 'none
          #:sep @hspace[5]
          (list (list "Programming:" "Haskell, COBOL, Rust, Typescript, & Pearl")
@@ -70,8 +70,7 @@ Here are my current topics of interest, so feel free to talk to me about any of 
                (list "Languages:" "Japanese, Mandarin, Hindi, Greek, & TokiPona")
                (list "Concepts:"
                      "Lambda Calc, Functional Programming, & Category Theory")
-               (list "Additionally:" "
- I am studying for my General Class Radio License, CompTIA Security+, and
+               (list @bold{Studying for:} " General Class Radio License, CompTIA Security+, and
 N5 Japanese Language Proficiency Exam"))]
 
 @; Slavov
