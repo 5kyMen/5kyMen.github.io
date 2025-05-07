@@ -299,7 +299,7 @@ table img {
 }
 
 a{
-  font-size: .85em !important;
+  font-size: 1em !important;
 }
 
 @media screen and (max-width: 950px) {
