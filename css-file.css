@@ -69,6 +69,7 @@ a:hover {
   border-bottom: 1px solid var(--accent-color);
 }
 
+
 .itemlist {
   padding-left: 20px;
 }
@@ -296,11 +297,8 @@ section:nth-child(5) { animation-delay: 0.4s; }
 table img {
   box-shadow: none !important;
 }
-table{
-  font-size : 1.1em;
-}
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 950px) {
   .tocview, .tocsub {
     display: none; 
   }
@@ -324,14 +322,14 @@ table{
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
-    padding-left: 10px;
-    text-indent: -15px;
+    padding-left: 8px;
+    text-indent: -8px;
     unicode-bidi: isolate;
     border-spacing: 100spx;
     border-color: rgb(129, 126, 126);
 }
   table img {
-    padding-left: 120px;
+    padding-left: 140px;
   }
   
 
