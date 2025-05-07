@@ -322,7 +322,7 @@ table img {
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
-    padding-left: 18px;
+    padding-left: 8px;
     text-indent: -8px;
     unicode-bidi: isolate;
     border-spacing: 100spx;
