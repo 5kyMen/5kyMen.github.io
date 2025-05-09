@@ -298,8 +298,8 @@ table img {
   box-shadow: none !important;
 }
 
-a{
-  font-size: 1em !important;
+a {
+  font-size: 0.88em !important;
 }
 
 @media screen and (max-width: 950px) {
@@ -335,4 +335,8 @@ a{
   table img {
     padding-left: 120px;
   }
+}
+
+table {
+    margin-left: -10px;
 }
