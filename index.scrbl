@@ -20,13 +20,13 @@ Hello! My name is @bold{Ryan Raschkovsky}, and welcome to my website!
 
 I'm an undergraduate at Northeastern University in Boston,
 where I am currently studying for a BS in Cybersecurity.
-
+x
 I'm currently certified as an FCC Technician for Amateur Radio and am studying multiple languages
 including Greek, Japanese, Mandarin, and toki pona!
 
 Here's where you can check out what @hyperlink["current.html"]{I'm working on}
 
-When I'm not working on Cybersecurity projects, you can find me
+When I'm not doing any projects, you can find me
 building drones, teaching Portuguese, or Distribution Hopping!
 
 
