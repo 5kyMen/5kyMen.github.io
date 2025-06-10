@@ -8,7 +8,7 @@
 
 @(define website-style
    (make-style "WebsiteStyle"
-               (list (make-css-addition "css-file.css"))))
+               (list (make-css-addition "cool.css"))))
 
 @title[#:style website-style]{Ryan Raschkovsky}
 
@@ -20,7 +20,7 @@ Hello! My name is @bold{Ryan Raschkovsky}, and welcome to my website!
 
 I'm an undergraduate at Northeastern University in Boston,
 where I am currently studying for a BS in Cybersecurity.
-x
+
 I'm currently certified as an FCC Technician for Amateur Radio and am studying multiple languages
 including Greek, Japanese, Mandarin, and toki pona!
 
@@ -34,10 +34,9 @@ building drones, teaching Portuguese, or Distribution Hopping!
 
 @; @section{Projects}
 
-@;@para{Coming soon!}
+@; @para{Coming soon!}
 
-
-@;@section{Slavov Lab}
+@; @section{Slavov Lab}
 
 @section{Contact}
 
@@ -56,4 +55,8 @@ Feel free to reach out to me!
 
 
 @verbatim{This site was written in Scribble. Check it out @hyperlink["https://docs.racket-lang.org/scribble/getting-started.html"]{here}}
+@hyperlink["https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html"]{@image["emacs.png"  #:scale 1.1]{}}
+@hyperlink["https://wiki.gentoo.org/wiki/Handbook:AMD64"]{@image["gen.png"  #:scale 1.1]{}}
 @hyperlink["http://www.catb.org/hacker-emblem/"]{@image["emb.png"  #:scale 1.1]{}}
+@hyperlink["https://racket-lang.org/"]{@image["racket.png"  #:scale 1.1]{}}
+

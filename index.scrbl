@@ -34,10 +34,9 @@ building drones, teaching Portuguese, or Distribution Hopping!
 
 @; @section{Projects}
 
-@;@para{Coming soon!}
+@; @para{Coming soon!}
 
-
-@;@section{Slavov Lab}
+@; @section{Slavov Lab}
 
 @section{Contact}
 

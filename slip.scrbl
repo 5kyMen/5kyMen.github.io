@@ -35,7 +35,7 @@ my attempt will begin to understand common streetside patterns as a way of abstr
 
 @image["geo.png" #:scale 0.3925]{}
 
-You can read the design document @hyperlink["slip.pdf"]{here}
+You can read the design document @hyperlink["slip-doc.pdf"]{here}
 
 
           
