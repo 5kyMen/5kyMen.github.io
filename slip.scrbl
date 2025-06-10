@@ -29,7 +29,6 @@ The system employs image processing and machine learning
 my attempt will begin to understand common streetside patterns as a way of abstracting through a more efficent algorithm. 
 
 @; Design Document 
-@; Casual and calm about it; dont explain too much 
 
 @image["bollard.jpg" #:scale 0.85]{}
 
