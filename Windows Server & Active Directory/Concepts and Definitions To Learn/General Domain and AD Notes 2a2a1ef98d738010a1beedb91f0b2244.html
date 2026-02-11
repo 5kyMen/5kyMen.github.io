@@ -1,0 +1,259 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>General Domain and AD Notes</title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a2a1ef9-8d73-8010-a1be-edb91f0b2244" class="page sans"><header><img class="page-cover-image" src="General%20Domain%20and%20AD%20Notes/pieqqz8uvkp51.jpg" style="object-position:center 50%"/><h1 class="page-title" dir="auto">General Domain and AD Notes</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80dd-849b-e47108a32b33" class=""><a href="https://learn.microsoft.com/en-us/windows-server/">Microsoft WS Documentation</a></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8027-9f6c-efda6dcac12b"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b7-b6df-ca254a451bb2" class=""><a href="https://learn.microsoft.com/en-us/entra/identity/domain-services/concepts-forest-trust">https://learn.microsoft.com/en-us/entra/identity/domain-services/concepts-forest-trust</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80e4-b424-cf924ee78272" class=""><span style="border-bottom:0.05em solid">Windows Active Directory Domain Trust: </span></p></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-809f-95bd-ed09f132b6b2" class="image"><a href="General%20Domain%20and%20AD%20Notes/03931d62-b420-40ce-bdf6-2ab177f38b6b.png"><img style="width:288px" src="General%20Domain%20and%20AD%20Notes/03931d62-b420-40ce-bdf6-2ab177f38b6b.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8036-a3cf-f2ad4ce91dca"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8071-8d23-dcd899ed64b6" class=""><mark class="highlight-red">Understanding Trust : </mark></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80e6-a875-c29296bae0e8" class=""><strong>Trust relationships enable access to resources can be either one-way or two-way.</strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8025-b04d-e9a359af6b59" class="bulleted-list"><li style="list-style-type:disc">A<mark class="highlight-blue"> one-way trust </mark>is a <span style="border-bottom:0.05em solid">unidirectional</span> authentication path created between two domains.<div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80d8-bfe3-d0c5993c6415" class="bulleted-list"><li style="list-style-type:circle"> In a one-way trust between Domain A and Domain B, users in Domain A can access resources in Domain B. However, users in Domain B can&#x27;t access resources in Domain A.</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80d4-89cf-e47f3e290358" class="bulleted-list"><li style="list-style-type:disc">Some one-way trusts can be either non-transitive or transitive depending on the type of trust being created.</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-805d-a882-c7c1405e765c"/></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8043-b3a7-d5342f95f67d" class="bulleted-list"><li style="list-style-type:disc">In a <mark class="highlight-blue">two-way trust</mark>, Domain A trusts Domain B and Domain B trusts Domain A. This configuration means that authentication requests can be passed between the two domains in both directions. Some two-way relationships can be non-transitive or transitive depending on the type of trust being created.</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-803e-a590-fc70a2278112" class="bulleted-list"><li style="list-style-type:disc">All domain trusts in an on-premises AD DS forest are two-way, transitive (able to take a direct object) trusts</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-802b-8f7d-ce50114c8bf0" class="">
+</p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-808e-bbeb-d78403e2ddc9" class="bulleted-list"><li style="list-style-type:disc">When a<em> new child domain </em>is created, a two-way, transitive trust is automatically created between the new child domain and the parent domain.</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8035-a590-c59e965d4831"/></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-803f-ba29-cc297b7f4505"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80fc-9382-f7ae19111429" class=""><mark class="highlight-brown"><strong>Base Network Info </strong></mark></h3></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8086-a29a-c0c418d999f0" class="bulleted-list"><li style="list-style-type:disc"><strong>DNS</strong> - Critical for AD DS functionality; DCs typically run DNS</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ee-a8b3-e72672717919" class="bulleted-list"><li style="list-style-type:disc"><strong>DHCP</strong> - Often configured alongside DCs for IP management</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8048-b824-f53277682fb3" class="bulleted-list"><li style="list-style-type:disc"><strong>Network Policy Server</strong> - RADIUS/network access control</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8019-a276-f37d15dd9acf"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-805e-afcb-e513c3f44f46" class="block-color-brown"><strong>AD Services (more documentation on prev. page) </strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8021-9da7-e967902e0ad1" class="bulleted-list"><li style="list-style-type:disc"><strong>Active Directory Domain Services (AD DS)</strong> - Core DC functionality for authentication, authorization, and directory services</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8036-8aeb-d7ecbae744a3" class="bulleted-list"><li style="list-style-type:disc"><strong>AD Federation Services (AD FS)</strong> - Single sign-on and federated identity</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-803a-a8ae-c61a33bf3b6b" class="bulleted-list"><li style="list-style-type:disc"><strong>AD Certificate Services (AD CS)</strong> - PKI infrastructure for certificates</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80fc-8c08-d7c2d74783b3" class="bulleted-list"><li style="list-style-type:disc"><strong>Windows LAPS</strong> - Local admin password management across domain</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80c0-bbd2-f5fe6965fc8e"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-802e-90ff-e7de6fdc350f" class=""><mark class="highlight-blue"><strong><span style="border-bottom:0.05em solid">Management Tools</span></strong></mark><mark class="highlight-blue"><span style="border-bottom:0.05em solid">:</span></mark></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8079-a016-c7ea07f40ad1" class="bulleted-list"><li style="list-style-type:disc"><strong>Windows Admin Center</strong> -  Web-based management interface</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80be-ba70-e568b53f5d4f" class="bulleted-list"><li style="list-style-type:disc"><strong>Azure Arc</strong> - Hybrid cloud management</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-809d-9f02-f7cccaa1c5ac" class="bulleted-list"><li style="list-style-type:disc"><strong>WSUS</strong> - Update management for domain computers</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8094-a07f-d3d2be85b3a1" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-803a-b3a3-c2712d4ca8d0"/></div><div style="display:contents" dir="auto"><h2 id="2a2a1ef9-8d73-804b-8d2f-efd8e91bc4b2" class=""><span style="border-bottom:0.05em solid">ACTIVE DIRECTORY SPECIFICS</span></h2></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-807c-b236-d6b28e9075fe" class=""><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview">Microsoft AD Documentation </a>   - more info </p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8081-b372-dc24a5e0c93b" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

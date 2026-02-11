@@ -1,0 +1,257 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Windows Server Command Reference</title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Windows%20Server%20&%20Active%20Directory.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="29ea1ef9-8d73-807d-9e15-ca676bfd6b49" class="page sans"><header><h1 class="page-title" dir="auto">Windows Server Command Reference</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-807e-936e-ce4bc58f1586"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80e5-bc92-f36b8bb1d2fd" class="">(pasted from <a href="https://gist.github.com/csdy/62549dc2839360644aa2cdee4739bb33">https://gist.github.com/csdy/62549dc2839360644aa2cdee4739bb33</a>)</p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8005-bc99-d5f8ffc0c098"/></div><div style="display:contents" dir="auto"><h2 id="29ea1ef9-8d73-8000-8b72-c3367aa790c5" class=""><strong><span style="border-bottom:0.05em solid">Shortcut Key</span></strong></h2></div><div style="display:contents" dir="auto"><h3 id="29ea1ef9-8d73-80f3-b88a-c3d3e4e7f6b6" class="">Copy/Paste</h3></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-802c-8f13-ebe324aacc1a" class=""><strong>Copy</strong><code>CTRL+C</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80ac-93c8-d40f81346807" class=""><strong>Paste</strong><code>CTRL+V</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80b8-aba8-e235ab2bfe12" class=""><strong>Clipboard Manager</strong><code>WIN+V</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-803c-9d26-d8465f2637d1" class=""><strong>Emoji</strong><code>WIN+;</code></p></div><div style="display:contents" dir="auto"><h3 id="29ea1ef9-8d73-8011-aa11-fe388014be34" class="">Account</h3></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80fe-a153-cd1d968ce861" class=""><strong>Logout</strong><code>WIN+L</code></p></div><div style="display:contents" dir="auto"><hr id="29ea1ef9-8d73-801b-8dcf-e2aee09ef128"/></div><div style="display:contents" dir="auto"><h2 id="29ea1ef9-8d73-8078-976f-ee6d3eb9a058" class=""><span style="border-bottom:0.05em solid">Power State</span></h2></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80eb-b41d-fab03c675114" class=""><strong>Log Off</strong><code>logoff</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80f7-9f26-e228213372af" class=""><strong>Log Off (Alternative)</strong><code>shutdown /l</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80f7-8cbb-d226a6713f17" class=""><strong>Shutdown</strong><code>shutdown</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80b6-9408-d1fa5205565c" class=""><strong>Shutdown (w/ Reason)</strong><code>shutdown /d p:4:1</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8052-b0aa-c6b366908f4d" class=""><strong>Shutdown (w/ Detailed Comment)</strong><code>shutdown /d p:4:1 /c &quot;Comment&quot;</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80d7-8c0e-eddbb9733d73" class=""><strong>Shutdown (w/ Reason)</strong><code>shutdown /e</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80c9-8c7f-c0f2c57f795f" class=""><strong>Shutdown (w/ Timeout)</strong><code>shutdown /t 0</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-802c-8e2b-e6e95dd8ec80" class=""><strong>Shutdown (Force Applications to Close)</strong><code>shutdown /f</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80c9-9f65-cb35012316d5" class=""><strong>Abort Shutdown</strong><code>shutdown /a</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8088-845e-c4557b4540bb" class=""><strong>Restart</strong><code>shutdown /r</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8079-bf77-d7e3e877595d" class=""><strong>Restart (to BIOS)</strong><code>shutdown /r /fw</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-800d-9501-c33d70f10148" class=""><strong>Restart (to Boot Options)</strong><code>shutdown /r /o</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80d7-b7a2-d2638bd1bbcd" class=""><strong>Hibernate</strong><code>shutdown /h</code></p></div><div style="display:contents" dir="auto"><h3 id="29ea1ef9-8d73-80f2-9103-fea31383a643" class=""><span style="border-bottom:0.05em solid">Shutdown Reason Codes</span></h3></div><div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-8036-8f4b-daf79cc0f8cb" class="bulleted-list"><li style="list-style-type:disc">E = Expected</li></ul></div><div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-8073-b9bd-fdb29aa579eb" class="bulleted-list"><li style="list-style-type:disc">U = Unexpected</li></ul></div><div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-8058-bce7-f6aae358945f" class="bulleted-list"><li style="list-style-type:disc">P = Planned</li></ul></div><div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-80af-b0ca-cbd4d02d81fd" class="bulleted-list"><li style="list-style-type:disc">C = Customer-Defined</li></ul></div><div style="display:contents" dir="ltr"><table id="29ea1ef9-8d73-80d7-9b74-c7af9d6e8d7d" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8008-848d-f75dc3552c92"><th id="N?&lt;_" class="simple-table-header-color simple-table-header">Type</th><th id="`s`N" class="simple-table-header-color simple-table-header">Major</th><th id="w_v[" class="simple-table-header-color simple-table-header">Minor</th><th id="cJWO" class="simple-table-header-color simple-table-header">Title</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8069-a608-e8a3bad9fc57"><td id="N?&lt;_" class="">U</td><td id="`s`N" class="">0</td><td id="w_v[" class="">0</td><td id="cJWO" class="">Other (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-804d-bf6a-ca92bc1e179b"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">0</td><td id="w_v[" class="">0</td><td id="cJWO" class="">Other (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8016-9afe-f710c36298c7"><td id="N?&lt;_" class="">E P</td><td id="`s`N" class="">0</td><td id="w_v[" class="">0</td><td id="cJWO" class="">Other (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80c6-83a7-eb11567e011e"><td id="N?&lt;_" class="">U</td><td id="`s`N" class="">0</td><td id="w_v[" class="">5</td><td id="cJWO" class="">Other Failure: System Unresponsive</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8047-bd7b-d7135c00676f"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">1</td><td id="w_v[" class="">1</td><td id="cJWO" class="">Hardware: Maintenance (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8001-9dcb-e83f07f2177d"><td id="N?&lt;_" class="">E P</td><td id="`s`N" class="">1</td><td id="w_v[" class="">1</td><td id="cJWO" class="">Hardware: Maintenance (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80ee-b2e2-f46e3248e936"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">1</td><td id="w_v[" class="">2</td><td id="cJWO" class="">Hardware: Installation (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80d3-8032-cb8b7f834a60"><td id="N?&lt;_" class="">E P</td><td id="`s`N" class="">1</td><td id="w_v[" class="">2</td><td id="cJWO" class="">Hardware: Installation (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8023-942d-d2cf1b886c39"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">2</td><td id="w_v[" class="">2</td><td id="cJWO" class="">Operating System: Recovery (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80e4-b851-fa9698e39139"><td id="N?&lt;_" class="">E P</td><td id="`s`N" class="">2</td><td id="w_v[" class="">2</td><td id="cJWO" class="">Operating System: Recovery (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-802b-adfd-c59b5a73481a"><td id="N?&lt;_" class="">P</td><td id="`s`N" class="">2</td><td id="w_v[" class="">3</td><td id="cJWO" class="">Operating System: Upgrade (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80c6-994c-fba48787a10b"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">2</td><td id="w_v[" class="">4</td><td id="cJWO" class="">Operating System: Reconfiguration (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8010-9da6-f28231cb79d7"><td id="N?&lt;_" class="">E P</td><td id="`s`N" class="">2</td><td id="w_v[" class="">4</td><td id="cJWO" class="">Operating System: Reconfiguration (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80de-bde2-db1d1c81d9ba"><td id="N?&lt;_" class="">P</td><td id="`s`N" class="">2</td><td id="w_v[" class="">16</td><td id="cJWO" class="">Operating System: Service pack (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80a4-a3cf-d3893e7816f4"><td id="N?&lt;_" class=""></td><td id="`s`N" class="">2</td><td id="w_v[" class="">17</td><td id="cJWO" class="">Operating System: Hot fix (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8030-8af0-d1e9dabaeb01"><td id="N?&lt;_" class="">P</td><td id="`s`N" class="">2</td><td id="w_v[" class="">17</td><td id="cJWO" class="">Operating System: Hot fix (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-803e-97d8-dc5684e22044"><td id="N?&lt;_" class=""></td><td id="`s`N" class="">2</td><td id="w_v[" class="">18</td><td id="cJWO" class="">Operating System: Security fix (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8013-8dad-d322fd90c212"><td id="N?&lt;_" class="">P</td><td id="`s`N" class="">2</td><td id="w_v[" class="">18</td><td id="cJWO" class="">Operating System: Security fix (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-805f-8a6e-de95b4913e80"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">4</td><td id="w_v[" class="">1</td><td id="cJWO" class="">Application: Maintenance (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80c0-a424-c4bf2249ac24"><td id="N?&lt;_" class="">E P</td><td id="`s`N" class="">4</td><td id="w_v[" class="">1</td><td id="cJWO" class="">Application: Maintenance (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80b9-9dc8-c64fa80a75a9"><td id="N?&lt;_" class="">E P</td><td id="`s`N" class="">4</td><td id="w_v[" class="">2</td><td id="cJWO" class="">Application: Installation (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-801e-a6ab-c329b72a79b4"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">4</td><td id="w_v[" class="">5</td><td id="cJWO" class="">Application: Unresponsive</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8051-9dea-dc34c3db0077"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">4</td><td id="w_v[" class="">6</td><td id="cJWO" class="">Application: Unstable</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8050-84af-ec6fb809e7ce"><td id="N?&lt;_" class="">U</td><td id="`s`N" class="">5</td><td id="w_v[" class="">15</td><td id="cJWO" class="">System Failure: Stop error</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8069-b33c-d384d5906f02"><td id="N?&lt;_" class="">U</td><td id="`s`N" class="">5</td><td id="w_v[" class="">19</td><td id="cJWO" class="">Security issue (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-800d-95fd-c08fa137f22b"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">5</td><td id="w_v[" class="">19</td><td id="cJWO" class="">Security issue (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80fd-916b-cdbb00a679a5"><td id="N?&lt;_" class="">E P</td><td id="`s`N" class="">5</td><td id="w_v[" class="">19</td><td id="cJWO" class="">Security issue (Planned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-8029-ae1a-e7f914bcca8b"><td id="N?&lt;_" class="">E</td><td id="`s`N" class="">5</td><td id="w_v[" class="">20</td><td id="cJWO" class="">Loss of network connectivity (Unplanned)</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-806d-af17-ec18eda7a539"><td id="N?&lt;_" class="">U</td><td id="`s`N" class="">6</td><td id="w_v[" class="">11</td><td id="cJWO" class="">Power Failure: Cord Unplugged</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-809f-81b6-d631ad1bbea4"><td id="N?&lt;_" class="">U</td><td id="`s`N" class="">6</td><td id="w_v[" class="">12</td><td id="cJWO" class="">Power Failure: Environment</td></tr></div><div style="display:contents" dir="ltr"><tr id="29ea1ef9-8d73-80d6-a488-da82b5ec1a39"><td id="N?&lt;_" class="">P</td><td id="`s`N" class="">7</td><td id="w_v[" class="">0</td><td id="cJWO" class="">Legacy API shutdown</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="29ea1ef9-8d73-80a4-b356-e6ce8f8a9d16"/></div><div style="display:contents" dir="auto"><h2 id="29ea1ef9-8d73-80dd-93ed-cfe74f7c304e" class=""><span style="border-bottom:0.05em solid">Applications</span></h2></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8041-95ba-f5d8fe69cc33" class=""><strong>Command Prompt</strong><code>cmd</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-809a-a1c4-fa7aa528e437" class=""><strong>PowerShell</strong><code>powershell</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-801d-904c-e61b7075508f" class=""><strong>PowerShell ISE</strong><code>powershell_ise</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80fe-8751-e825a3df99ed" class=""><strong>Calculator</strong><code>calc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8098-bbf3-dda44e0c5594" class=""><strong>Character Map</strong><code>charmap</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80be-ac1e-d2b5ce4206b7" class=""><strong>Disk Cleanup</strong><code>cleanmgr</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8013-8970-ec26dbb45d80" class=""><strong>Disk Partition Manager</strong><code>diskpart</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8025-83b6-f896b3e22857" class=""><strong>File Explorer</strong><code>explorer</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80c4-8904-d3cbea9ded5c" class=""><strong>Fonts</strong><code>fonts</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80bc-b2a1-d949adc3cefa" class=""><strong>Management Console</strong><code>mmc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8082-b8c0-d244cf4431f5" class=""><strong>Malicious Software Removal</strong><code>mrt</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-804c-9046-fdbea9a4b9bb" class=""><strong>System Configuration</strong><code>msconfig</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-803e-a9cc-f7022ce6c6cb" class=""><strong>System Information</strong><code>msinfo32</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-809e-822c-d2a4b83a792d" class=""><strong>Remote Desktop</strong><code>mstsc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80e1-9180-f0f6a5db0b66" class=""><strong>Notepad</strong><code>notepad</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-803c-888b-d36ae89c47e6" class=""><strong>ODBC Data Source Administrator (64-Bit)</strong><code>C:\\windows\\system32\\odbcad32.exe</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-806b-990c-ff2f19de8bb0" class=""><strong>ODBC Data Source Administrator (32-Bit)</strong><code>C:\\windows\\sysWOW64\\odbcad32.exe</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80a1-9e5e-e1199c2eae0e" class=""><strong>Windows Features</strong><code>optionalfeatures</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8031-b74c-f04a9ba73d21" class=""><strong>On-Screen Keyboard</strong><code>osk</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80eb-8ca6-fe9dc43408ee" class=""><strong>Registry Editor</strong><code>regedit</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8095-8edf-f67bc1df37c7" class=""><strong>Resource Monitor</strong><code>resmon</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80f3-b507-f7684871ce06" class=""><strong>Shared Folder Wizard</strong><code>shrpubw</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8001-a10a-e512aa79ebc3" class=""><strong>Windows Activation</strong><code>slui</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8057-b94b-d2e9c1e4fd52" class=""><strong>Task Manager</strong><code>taskmgr</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80c8-8462-fe6ba913e6b6" class=""><strong>Accessibility Options</strong><code>utilman</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-806c-9dba-f4f163a513c6" class=""><strong>Windows Version</strong><code>winver</code></p></div><div style="display:contents" dir="auto"><hr id="29ea1ef9-8d73-80f8-a959-e54338b19edc"/></div><div style="display:contents" dir="auto"><h2 id="29ea1ef9-8d73-80de-a3f6-f0fcb036153c" class=""><span style="border-bottom:0.05em solid">Control Panel</span></h2></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80f3-8269-f011c82517ac" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80a0-8bc1-c0a2d14c5eed" class=""><strong>Control Panel</strong><code>control</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8012-a888-c9577e1fa651" class=""><strong>Accessibility Options</strong><code>control access.cpl</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80eb-9b80-fe5d4d560242" class=""><strong>Administrative Tools</strong><code>control admintools</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8079-bd0c-c3aa79f502e8" class=""><strong>Add New Programs</strong><code>control appwiz.cpl,,1</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8075-af4b-e963401603ca" class=""><strong>Add/Remove Windows Components</strong><code>control appwiz.cpl,,2</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80a3-80f9-ca834dd16769" class=""><strong>Set Program Access &amp; Defaults</strong><code>control appwiz.cpl,,3</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-807c-8cc3-ca62a1b4538b" class=""><strong>Display Properties (Themes, Desktop, Screensaver)</strong><code>control desktop</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80dd-8f4e-e174460d8b81" class=""><strong>Display Properties (Color &amp; Appearance)</strong><code>control color</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80c4-b4e2-e3af91b30646" class=""><strong>Folder Options</strong><code>control folders</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-809a-9299-fa00cd9c4731" class=""><strong>Fonts List</strong><code>control fonts</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8012-9649-cb3e97e67765" class=""><strong>Keyboard Properties</strong><code>control keyboard</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8003-88c4-e3aa26d50ba4" class=""><strong>Mouse Properties</strong><code>control mouse</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8027-bb2b-cf4a4cd8ffc6" class=""><strong>Network Connections</strong><code>control netconnections</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8007-893d-cbe1a13f68db" class=""><strong>Printers/Faxes</strong><code>control printers</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8085-bd50-c6901faf5d3f" class=""><strong>Scheduled Tasks</strong><code>control schedtasks</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8079-8ec8-ffd6cffcf033" class=""><strong>Windows Update</strong><code>control update</code></p></div><div style="display:contents" dir="auto"><h3 id="29ea1ef9-8d73-8056-b6ef-d6207df3c718" class=""><span style="border-bottom:0.05em solid">Control Panel Files (.cpl)</span></h3></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-806d-9a0d-e44e7439231a" class=""><strong>Add/Remove Programs</strong><code>appwiz.cpl</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80f6-a6d6-d0a3262328d5" class=""><strong>Date/Time Properties</strong><code>timedate.cpl</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-804e-98af-d75f5e288239" class=""><strong>Display Properties</strong><code>desk.cpl</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80cd-b893-fff24c8b2323" class=""><strong>Internet Properties</strong><code>inetcpl.cpl</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-805c-8c7e-dd1b3595d401" class=""><strong>Keyboard Properties</strong><code>main.cpl keyboard</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-803f-bd08-dd44d332d294" class=""><strong>Mouse Properties</strong><code>main.cpl</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80a9-ad11-da3f7d043993" class=""><strong>Multimedia Properties</strong><code>mmsys.cpl</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8080-9a96-cc410eb628e5" class=""><strong>Security Center</strong><code>wscui.cpl</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-803c-bc14-ce9eafb321a0" class=""><strong>Sound Properties</strong><code>mmsys.cpl sounds</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8058-bcc7-d16ff833c4b9" class=""><strong>System Properties</strong><code>sysdm.cpl</code></p></div><div style="display:contents" dir="auto"><hr id="29ea1ef9-8d73-8045-9af0-f487fb4da81a"/></div><div style="display:contents" dir="auto"><h2 id="29ea1ef9-8d73-80fa-b6c6-ef546005b6be" class=""><span style="border-bottom:0.05em solid">Management Consoles (.msc)</span></h2></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8000-9b75-edbe2fe804b8" class=""><strong>Certificate Manager</strong><code>certmgr.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8062-9169-e2041e66f364" class=""><strong>Component Services</strong><code>comexp.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80c0-a952-f260fa7af30a" class=""><strong>Computer Management</strong><code>compmgmt.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80b1-904f-cccf2bdb14fd" class=""><strong>Device Manager</strong><code>devmgmt.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8007-8f22-dffc4a95a80b" class=""><strong>Disk Management</strong><code>diskmgmt.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8076-ba5d-c7a99e71018b" class=""><strong>Event Viewer</strong><code>eventvwr.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-802c-90f7-f64523c65f8c" class=""><strong>Firewall Management</strong><code>wf.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-805a-a3d3-e837319c2fa1" class=""><strong>Shared Folders</strong><code>fsmgmt.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8057-9963-ea2d42a8185a" class=""><strong>Group Policy Editor</strong><code>gpedit.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-800b-afeb-c9adbba52ff1" class=""><strong>Local Users and Groups</strong><code>lusrmgr.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8078-b403-d5c8d2457080" class=""><strong>Performance Monitor</strong><code>perfmon.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80b3-8dcf-c1887ed62524" class=""><strong>Resultant Set of Policy</strong><code>rsop.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-809f-b134-e02ff24029af" class=""><strong>Local Security Policy</strong><code>secpol.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-8075-a27a-eafee9260103" class=""><strong>Service Manager</strong><code>services.msc</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-805f-8cf8-fa95d7f1c8ad" class=""><strong>Task Scheduler</strong><code>taskschd.msc</code></p></div><div style="display:contents" dir="auto"><hr id="29ea1ef9-8d73-80c2-9a0e-e374c52fb125"/></div><div style="display:contents" dir="auto"><h2 id="29ea1ef9-8d73-80a8-b2e2-e81fdfb533a3" class=""><span style="border-bottom:0.05em solid">Command Utilities</span></h2></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80f2-a5fe-e3787fe88744" class=""><strong>Explorer - C:</strong><code>\\</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80c7-bacc-d0934ba722a5" class=""><strong>Explorer - Home Folder</strong><code>.</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80a1-a488-e7dd0bf33867" class=""><strong>Explorer - Users Folder</strong><code>..</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-809c-84f4-f9464b8ffeca" class=""><strong>Disk Partition Manager</strong><code>diskpart</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-803f-8b01-ed28573c2c1a" class=""><strong>System File Checker</strong><code>sfc /scannow</code></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80be-abb6-d405d4525f86" class=""><strong>Windows Activation</strong><code>slmgr /ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx</code></p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,258 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Understanding WS Domain and DNS</title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a2a1ef9-8d73-8002-ab5a-f9da88cf4484" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/woodcuts_8.jpg" style="object-position:center 0%"/><h1 class="page-title" dir="auto">Understanding WS Domain and DNS</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80f0-920e-e748f16d80d8"/></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80db-883e-c038089d4e5e"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8083-beb6-e8a06f3812a0" class=""><a href="https://kb.blackbaud.com/knowledgebase/articles/Article/38187">https://kb.blackbaud.com/knowledgebase/articles/Article/38187</a> - <mark class="highlight-blue"><strong>What is a Domain and a Domain Controller? </strong></mark></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80a2-9ebc-cb00e331a2b3" class=""><a href="https://community.spiceworks.com/t/linking-your-windows-domain-and-your-website-domain/828181">https://community.spiceworks.com/t/linking-your-windows-domain-and-your-website-domain/828181</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-807c-82cb-f92bb09f4df0" class=""><a href="https://support.cloudshare.com/hc/en-us/articles/360035332172-Active-Directory-Domain-Creation-in-Windows-Server-2016-Standard">https://support.cloudshare.com/hc/en-us/articles/360035332172-Active-Directory-Domain-Creation-in-Windows-Server-2016-Standard</a></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80b1-8754-fcfa9485814d"/></div><div style="display:contents" dir="auto"><div id="2a2a1ef9-8d73-80c5-b718-f300a2bd3e3c" class="column-list"><div style="display:contents" dir="auto"><div id="2a2a1ef9-8d73-8024-8575-fd4989a9bc61" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8068-a3e6-d284ed650fd4" class=""><strong><span style="border-bottom:0.05em solid">What is a Windows Domain?</span></strong></h3></div></div></div><div style="display:contents" dir="auto"><div id="2a2a1ef9-8d73-8010-b8fb-f790671bc4c7" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80e1-b037-f692348fb44e" class=""><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview">https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview</a></p></div></div></div></div></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-804f-a9c9-e2cba0da46bf" class="bulleted-list"><li style="list-style-type:disc">A logical group of network objects (computers, users, devices) that share a centralized directory database</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-808a-853c-cb01fe359712" class="bulleted-list"><li style="list-style-type:disc">Managed by Active Directory Domain Services (AD DS) on Windows Server</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80e5-987e-c83ecc80d179" class="bulleted-list"><li style="list-style-type:disc">Provides single sign-on - users log in once to access all domain resources</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8024-95d5-f1820fd80e89"/></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801d-bd3e-e2cb2c080a14" class="bulleted-list"><li style="list-style-type:disc"><strong>Domain Name</strong>: Like <code>company.local</code> or <code>corp.contoso.com</code></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c7-87ba-cc41946ea930" class="bulleted-list"><li style="list-style-type:disc"><strong>Domain Database</strong>: Stores all user accounts, computer accounts, security groups, and policies</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8012-b8f1-d1362569f14e" class="bulleted-list"><li style="list-style-type:disc"><strong>Trust Relationships</strong>: Allow users from one domain to access resources in another</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-806b-85b8-f750a487ac5f" class="bulleted-list"><li style="list-style-type:disc"><strong>Organizational Units (OUs)</strong>: Containers within a domain for organizing and managing objects</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80c7-8f47-fa725363dc69"/></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8034-9151-fadd041ad615" class="bulleted-list"><li style="list-style-type:disc">A Windows Server that runs Active Directory Domain Services (AD DS)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-803a-8df0-e8b2169babb8" class="bulleted-list"><li style="list-style-type:disc">Authenticates users and computers when they log into the domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8045-a80e-da33eb123210" class="bulleted-list"><li style="list-style-type:disc">Stores the Active Directory database </li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-802d-9562-f3eb174cde73" class="bulleted-list"><li style="list-style-type:disc">Enforces security policies across the domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ec-beaf-d993d59a1d2b" class="bulleted-list"><li style="list-style-type:disc">Replicates directory changes to other domain controllers</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80f3-8b52-d83f9bd8e68f"/></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8068-a635-c2aed82e02ac" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Authentication</span></strong><span style="border-bottom:0.05em solid">:</span> Verifies usernames/passwords</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8089-9fc9-c01da5346c5a" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Authorization</span></strong>: Determines what resources users can access</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-802d-92f1-df3e171b61a5" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Replication</span></strong>: Syncs changes with other DCs</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ae-929b-d3f287d2c4c7" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Group Policy</span></strong>: Applies and enforces security settings</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8099-8d82-fc2070d6d923" class="bulleted-list"><li style="list-style-type:disc"><strong>FSMO Roles</strong>: Special roles like PDC Emulator, RID Master, Schema Master</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80f6-8b2b-fee3972eeb9d"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8056-8795-e626f5851adc" class=""><span style="border-bottom:0.05em solid">DNS in AD</span></h3></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80b0-b91e-de1b1b7aee5c" class="bulleted-list"><li style="list-style-type:disc">Active Directory i<strong>s completely dependent on DNS to function</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807e-a869-e0f4ad1c3bac" class="bulleted-list"><li style="list-style-type:disc">Computers use DNS to locate domain controllers and other AD services</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8055-9cd2-e4656db1adfe" class="bulleted-list"><li style="list-style-type:disc">Without proper DNS, users cannot log in or find domain resources</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-808b-a354-ca203b2bd9ff"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80e6-8dc6-d6efc794ae26" class=""><strong><span style="border-bottom:0.05em solid">How AD Uses DNS:</span></strong></p></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8078-8080-d015dd7e7d26" class="numbered-list" start="1"><li><strong><span style="border-bottom:0.05em solid">SRV Records</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c3-9c0c-e95fa336e3a3" class="bulleted-list"><li style="list-style-type:disc">Special DNS records that help computers find domain controllers</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8003-bf13-ec780f76327f" class="bulleted-list"><li style="list-style-type:disc">Examples: <code>_ldap._tcp.domain.com</code>, <code>_kerberos._tcp.domain.com</code></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80f7-ae39-f834122dbeff" class="bulleted-list"><li style="list-style-type:disc">When a computer needs to authenticate, it queries DNS for these SRV records</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8047-8880-fdd1fa4cbe4d" class="numbered-list" start="2"><li><strong><span style="border-bottom:0.05em solid">AD-Integrated DNS Zones</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ad-995a-c5899520215a" class="bulleted-list"><li style="list-style-type:disc">DNS zones stored directly in Active Directory</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8049-9fbf-c83fcf77ad1f" class="bulleted-list"><li style="list-style-type:disc">Replicate automatically with AD replication</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8075-852e-e806ba85b34e" class="numbered-list" start="3"><li><strong><span style="border-bottom:0.05em solid">Dynamic DNS Updates</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8021-b108-ce6b0c7e3dec" class="bulleted-list"><li style="list-style-type:disc">Domain computers automatically register their own DNS records</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8046-bfd2-d7696fe53ba8" class="bulleted-list"><li style="list-style-type:disc">Domain controllers register multiple SRV records for various services</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801b-806c-d83bb0d42370" class="bulleted-list"><li style="list-style-type:disc">Keeps DNS synchronized with current network state</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80f0-be5f-d3917d2d63ea"/></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80d4-93f3-e7a4ee9911be"/></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80b5-916d-dbe3b25393bf"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80f2-8725-d6ca69259f2e" class=""><span style="border-bottom:0.05em solid">GENERAL CONFIG (FULL INSTALLATION IN OTHER SECTION) </span></h3></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-808b-8e44-da9bbf88a79f" class="numbered-list" start="1"><li><strong>Domain Join Process:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8030-aa58-d5170a568f5e" class="bulleted-list"><li style="list-style-type:disc">Computer queries DNS for domain controller SRV records</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80aa-9b46-e7074645dbb4" class="bulleted-list"><li style="list-style-type:disc">DNS returns list of available DCs</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ef-8b2b-f8211b504240" class="bulleted-list"><li style="list-style-type:disc">Computer contacts DC to join domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-804e-8e1f-fc23c31b8b98" class="bulleted-list"><li style="list-style-type:disc">DC creates computer account in AD</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807c-8b0b-e3b1a7b9d870" class="bulleted-list"><li style="list-style-type:disc">Computer registers its own DNS record</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80b1-9aa1-f4b630a07ccf" class="numbered-list" start="2"><li><strong>User Login Process:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8030-936c-c0f792232b9d" class="bulleted-list"><li style="list-style-type:disc">User enters credentials at workstation</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8060-b329-ce76a1176cf9" class="bulleted-list"><li style="list-style-type:disc">Workstation queries DNS for domain controller</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8058-a93a-d0b6d6ff7377" class="bulleted-list"><li style="list-style-type:disc">DNS provides DC location via SRV records</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801e-b2f3-fede3502b0c9" class="bulleted-list"><li style="list-style-type:disc">Workstation contacts DC for authentication</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80e3-a099-fdbba53977e4" class="bulleted-list"><li style="list-style-type:disc">DC validates credentials and provides access token</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8039-8648-c1b27fb44e1a" class="numbered-list" start="3"><li><strong>Name Resolution:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80e3-9a92-cc458d171c26" class="bulleted-list"><li style="list-style-type:disc">Domain uses DNS namespace (like <code>company.local</code>)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80e1-89e9-cdecaf8bc2a8" class="bulleted-list"><li style="list-style-type:disc">Every domain object has a DNS name</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ce-8925-dd04c535097c" class="bulleted-list"><li style="list-style-type:disc">Computers use DNS to resolve names to IP addresses</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-809d-b525-c013e9af88ad" class="bulleted-list"><li style="list-style-type:disc">Example: <code>server01.company.local</code> → <code>192.168.1.10</code></li></ul></div></li></ol></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80fc-9b41-ded1a6337b27"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-800b-a174-c465e73207e6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8007-9912-e5f2a48d55ed" class=""><strong><span style="border-bottom:0.05em solid">DNS Setup</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-802b-849a-c7f11c971ecc" class="bulleted-list"><li style="list-style-type:disc">Install DNS on all domain controllers</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80b6-9a15-cc64fcca21a3" class="bulleted-list"><li style="list-style-type:disc">Use AD-integrated zones for auto-replication</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80f0-9111-c866b2bfbd53" class="bulleted-list"><li style="list-style-type:disc">Point all domain computers to DC for DNS</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80d0-bb04-e23986cb6c57" class="bulleted-list"><li style="list-style-type:disc">Set up forwarders for internet resolution</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c1-85f4-e036fa6689c0" class="bulleted-list"><li style="list-style-type:disc">Never use external DNS (8.8.8.8) as primary</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-802e-a45f-df829cd7edd6" class=""><strong><span style="border-bottom:0.05em solid">Domain Controllers</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8038-b48b-fc0afddf50c3" class="bulleted-list"><li style="list-style-type:disc">Minimum 2 DCs for redundancy</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80bd-a32a-d2699f9ab123" class="bulleted-list"><li style="list-style-type:disc">Place in different locations when possible</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8000-a071-de6481520f67" class="bulleted-list"><li style="list-style-type:disc">Use static IP addresses</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ea-b01a-f14207acffd1" class="bulleted-list"><li style="list-style-type:disc">Configure DNS before DC promotion</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-806a-9b01-e859569ae29f" class="bulleted-list"><li style="list-style-type:disc">Sync time for Kerberos</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80fd-83c8-e45d6bcd8497" class=""><strong><span style="border-bottom:0.05em solid">DNS Records</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801b-b8c7-ee14a9fde221" class="bulleted-list"><li style="list-style-type:disc">A Record - hostname to IP</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80db-ba2b-e28c47092040" class="bulleted-list"><li style="list-style-type:disc">SRV Record - finds domain controllers</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a8-8fe9-d56a5e6d3821" class="bulleted-list"><li style="list-style-type:disc">PTR Record - reverse lookup</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ee-a889-fc5cbf1dfec2" class="bulleted-list"><li style="list-style-type:disc">CNAME - hostname aliases</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8070-8321-d8c60f5a4d63" class="bulleted-list"><li style="list-style-type:disc">NS Record - identifies DNS servers</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8084-93f3-f9d85b4747e1"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8044-b5c2-d934d6847da9" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"><hr/><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Inline comments</summary><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">A logical group of network objects (computers, users, devices) that share a centralized directory database</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/AAcHTtfJatAP21GIzrplXYrWKLaQyIa1NP6BZq1uGUg2JMNzpw=s100" class="icon user-icon"/><span><b>Ryan Rasch</b> <time style="font-size:0.8em">Nov 5, 2025, 11:38 AM</time></span></span></div><div style="padding:0.2em">Remember that it also allows all security policies, permissions, and user accounts are managed centrally</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details></span></body></html>

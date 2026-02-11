@@ -1,0 +1,247 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Windows Server &amp; Active Directory</title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="index.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="29ea1ef9-8d73-80b9-8ca9-d44444b3f1ee" class="page sans"><header><img class="page-cover-image" src="Windows%20Server%20&amp;%20Active%20Directory/czj73izfq4a71.webp" style="object-position:center 50%"/><h1 class="page-title" dir="auto">Windows Server &amp; Active Directory </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80e1-a7ae-f2195f138297"/></div><div style="display:contents" dir="ltr"><figure id="2a1a1ef9-8d73-80ae-a0ee-c5926deeb8f7" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Install%20Notes%20and%20Documentation%202a1a1ef98d7380aea0eec5926deeb8f7.html">Install Notes and Documentation </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8079-95c8-daca71aa10f5"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-8084-98b8-c23e40127a03" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html">Concepts and Definitions To Learn </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8073-b756-e64dacef1fec"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-8087-a4d7-d65f73f2e80d" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Becoming%20a%20PowerShell%20God%2029ea1ef98d738087a4d7d65f73f2e80d.html">Becoming a PowerShell God </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80c0-bc4e-f310a58d3d67"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-807d-9e15-ca676bfd6b49" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Windows%20Server%20Command%20Reference%2029ea1ef98d73807d9e15ca676bfd6b49.html">Windows Server Command Reference</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8067-8f8a-cc4bf77ee8a0"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-804a-a34d-efdc5526ec89" class="block-color-default_background"><span style="border-bottom:0.05em solid">Resources</span></h3></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8002-971f-e9e554542d08" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Possible%20courses%202a2a1ef98d738002971fe9e554542d08.html">Possible courses </a></figure></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80f6-8b07-dea3f8368988" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/YouTube%20Videos%202a2a1ef98d7380f68b07dea3f8368988.html">YouTube Videos </a></figure></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80f3-a5ca-d3e2b68f25e8" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Cheatsheets%20and%20Guides%202a2a1ef98d7380f3a5cad3e2b68f25e8.html">Cheatsheets and Guides </a></figure></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80bf-b762-fe815f9fd6c5" class="">-<a href="https://github.com/awesome-foss/awesome-sysadmin">https://github.com/awesome-foss/awesome-sysadmin</a> </p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8060-a891-fcd821b8e03d" class=""><a href="https://nuccdc.gitlab.io/team/documentation/windows/index.html">https://nuccdc.gitlab.io/team/documentation/windows/index.html</a></p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

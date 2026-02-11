@@ -1,0 +1,256 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Users, Admins, Groups, and Permissions </title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a2a1ef9-8d73-8008-b7d8-f9278da3f39f" class="page sans"><header><h1 class="page-title" dir="auto">Users, Admins, Groups, and Permissions </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-800b-8516-fd648252725a" class=""><span style="border-bottom:0.05em solid">Domain Users vs Local Users</span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80e6-a34b-c1440a36fe31" class=""><strong>Domain Users</strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-802a-995b-d1552c8d8f2a" class="bulleted-list"><li style="list-style-type:disc">Stored centrally in Active Directory database on Domain Controllers</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8036-8e45-dd8b8f76a92b" class="bulleted-list"><li style="list-style-type:disc">Can log into any domain-joined computer with same credentials</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80f0-bae9-f11dea1cbd14" class="bulleted-list"><li style="list-style-type:disc">Managed through Active Directory Users and Computers (ADUC) or PowerShell</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80dc-a870-cc556106a82d" class="bulleted-list"><li style="list-style-type:disc">Replicated across all DCs in the domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8057-b5b4-c8a711187168" class="bulleted-list"><li style="list-style-type:disc">Follow domain-wide security policies</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80d6-9702-c06733b1739c"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8088-85da-e8e9700301b0" class=""><strong><span style="border-bottom:0.05em solid">Local Users</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8074-8356-fa40482ee6ce" class="bulleted-list"><li style="list-style-type:disc">Exist only on individual servers/computers</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80af-95f2-d381509b8e1d" class="bulleted-list"><li style="list-style-type:disc">Cannot access domain resources</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a1-a817-c649bec3770c" class="bulleted-list"><li style="list-style-type:disc">Managed through Local Users and Groups (lusrmgr.msc)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8058-8650-cccc0f83416b" class="bulleted-list"><li style="list-style-type:disc">Must be created separately on each machine</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80dd-a854-e2ad59e96296"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-800a-8052-c941ee05cb4b" class="block-color-red"><span style="border-bottom:0.05em solid">Domain Groups</span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8075-be57-eab34eed49f9" class=""><strong><span style="border-bottom:0.05em solid">Group Types:</span></strong></p></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8005-bd08-d4c7232c812d" class="numbered-list" start="1"><li><strong><span style="border-bottom:0.05em solid">Security Groups</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801d-aa44-f724e29a35f2" class="bulleted-list"><li style="list-style-type:disc">Used for assigning permissions and rights</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-800d-8bb9-fd8151e4a7bb" class="bulleted-list"><li style="list-style-type:disc">Can also be used for email distribution</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-809c-b219-c4ba262189d3" class="numbered-list" start="2"><li><strong><span style="border-bottom:0.05em solid">Distribution Groups</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8022-bf7c-dc89d1058d00" class="bulleted-list"><li style="list-style-type:disc">Used only for email distribution lists</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c5-a300-f81257c3bd28" class="bulleted-list"><li style="list-style-type:disc">Cannot be used for security permissions</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8099-a7f8-e5e92fa2aa49" class=""><strong><span style="border-bottom:0.05em solid">Group Scopes:</span></strong></p></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8080-89e4-c471543e4e40" class="numbered-list" start="1"><li><strong><span style="border-bottom:0.05em solid">Domain Local Groups</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-803e-903b-d107acea9674" class="bulleted-list"><li style="list-style-type:disc">Can contain users/groups from any domain in forest</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8063-9b4d-edd741cd4937" class="bulleted-list"><li style="list-style-type:disc">Used to assign permissions to resources within the domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8071-82d6-cc3a8a15ba91" class="bulleted-list"><li style="list-style-type:disc">There is usually a naming convention that adheres to the: DC/ DG<div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8060-937a-d9ea578f8492" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow">BEST PRACTICE FOR EFFICENT ORGANIZATION </mark></li></ul></div></li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-804c-9803-e6fc16586d80" class="numbered-list" start="2"><li><strong><span style="border-bottom:0.05em solid">Global Groups</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-803e-9c70-fbfdea5be7b9" class="bulleted-list"><li style="list-style-type:disc">Can contain only users/groups from same domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8030-ae81-f4820b01d342" class="bulleted-list"><li style="list-style-type:disc">Can be used in any domain in forest</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-808f-af59-dbc1b4bc6aac" class="numbered-list" start="3"><li><strong>U</strong><strong><span style="border-bottom:0.05em solid">niversal Groups</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8042-a61a-f652a174780d" class="bulleted-list"><li style="list-style-type:disc">Can contain users/groups from any domain in forest</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-809d-9e79-ea3360e4074d" class="bulleted-list"><li style="list-style-type:disc">Can be used anywhere in forest</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80d1-86f4-cddc3bc86588" class="bulleted-list"><li style="list-style-type:disc">Replicated to <em>Global Catalog</em></li></ul></div></li></ol></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8011-a41f-da087f205779"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8076-af9a-d6fd01f4cb8f" class=""><span style="border-bottom:0.05em solid">Default Users</span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-801e-8dea-d6dc4c176a2e" class=""><mark class="highlight-blue"><strong><span style="border-bottom:0.05em solid">Built-in User Accounts:</span></strong></mark></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8056-bd1d-f6082d73f45d" class="bulleted-list"><li style="list-style-type:disc"><strong>Administrator</strong> - Full control over domain (disabled by default in newer versions)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80bd-8fda-f14eab289f21" class="bulleted-list"><li style="list-style-type:disc"><strong>Guest</strong> - Limited access account (disabled by default)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80df-8125-c6fcaa2322ce" class="bulleted-list"><li style="list-style-type:disc"><strong>krbtgt</strong> - Kerberos Key Distribution Center service account</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-800c-915a-ef875d91e606" class="bulleted-list"><li style="list-style-type:disc"><strong>DefaultAccount</strong> - System managed account (disabled)</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8060-bf21-f1cd5253e573" class=""><strong>Service Accounts (commonly created):</strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a2-b91f-db73426a3369" class="bulleted-list"><li style="list-style-type:disc">SQL service accounts</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8073-9fb4-ed47988c41c7" class="bulleted-list"><li style="list-style-type:disc">Exchange service accounts</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8084-91fe-cac977b175b1" class="bulleted-list"><li style="list-style-type:disc">Backup service accounts</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8032-8d56-cfc9e6f9f67a" class="bulleted-list"><li style="list-style-type:disc">Application-specific accounts</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80e8-a97a-e890410e6bbd"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8087-af02-df1669edbf68" class=""><span style="border-bottom:0.05em solid">Default Groups</span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8044-afcf-c29a9a1d3520" class=""><strong>Key Built-in Groups:</strong></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8064-806b-d2ceb97615e6" class=""><strong><span style="border-bottom:0.05em solid">Administrative Groups:</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8054-87f8-f895f9971510" class="bulleted-list"><li style="list-style-type:disc"><strong>Domain Admins</strong> - Full admin rights across entire domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80db-b4cc-c916c35fadf6" class="bulleted-list"><li style="list-style-type:disc"><strong>Enterprise Admins</strong> - Full rights across entire forest</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8045-8e2b-d77e00c7b936" class="bulleted-list"><li style="list-style-type:disc"><strong>Schema Admins</strong> - Can modify AD schema</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a0-a45e-e98b55d7e599" class="bulleted-list"><li style="list-style-type:disc"><strong>Administrators</strong> - Local admin group on DCs</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a9-8983-dbc81ccee0b1" class="bulleted-list"><li style="list-style-type:disc"><strong>Account Operators</strong> - Can manage user accounts</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8032-81fc-fa2fafc53a51" class="bulleted-list"><li style="list-style-type:disc"><strong>Server Operators</strong> - Can manage domain servers</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-802e-8760-d6728a0b8ea2" class="bulleted-list"><li style="list-style-type:disc"><strong>Backup Operators</strong> - Can backup/restore files</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80c4-99a5-dfff04fc2a10" class=""><strong><span style="border-bottom:0.05em solid">User Groups:</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a4-bb7b-dae93f5489ef" class="bulleted-list"><li style="list-style-type:disc"><strong>Domain Users</strong> - All domain users automatically added</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ec-accc-fad32737ea0a" class="bulleted-list"><li style="list-style-type:disc"><strong>Domain Guests</strong> - Guest access to domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8071-a9d4-d6f05bce71e1" class="bulleted-list"><li style="list-style-type:disc"><strong>Domain Computers</strong> - All domain-joined computers</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-809c-a22e-de0bc30e0eab" class=""><strong><span style="border-bottom:0.05em solid">Special Groups:</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8007-9c18-d57013422d2f" class="bulleted-list"><li style="list-style-type:disc"><strong>Authenticated Users</strong> - Any authenticated user</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8009-ab9d-dba4f5b4d0e8" class="bulleted-list"><li style="list-style-type:disc"><strong>Everyone</strong> - All users including anonymous</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ae-b11b-e45747ea2d1d" class="bulleted-list"><li style="list-style-type:disc"><strong>Interactive</strong> - Users logged on locally</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807b-a4d2-e886b6a856d2" class="bulleted-list"><li style="list-style-type:disc"><strong>Network</strong> - Users accessing over network</li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,263 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>YouTube Videos </title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Windows%20Server%20&%20Active%20Directory.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a2a1ef9-8d73-80f6-8b07-dea3f8368988" class="page sans"><header><h1 class="page-title" dir="auto">YouTube Videos </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8075-9993-e81d21daf13d"/></div><div style="display:contents" dir="auto"><blockquote id="2a2a1ef9-8d73-80a0-9f3f-ce7898b48a97" class="">Documentation: Refer to <em><mark class="highlight-yellow"><strong>Concepts and Definitions</strong></mark></em><em><strong> </strong></em><em>for specific notes </em></blockquote></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80d2-b964-d7c8904a31cb"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-803c-a01a-c6e431f11b77" class=""><strong><span style="border-bottom:0.05em solid">General Windows Server Understanding</span></strong></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-801c-8b6b-ec7af100834e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80a8-8c4f-faec6d9430fc" class=""><a href="https://www.youtube.com/watch?v=MHsI8hJmggI">https://www.youtube.com/watch?v=MHsI8hJmggI</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8057-8908-cc48286abb2f" class=""><a href="https://www.youtube.com/watch?v=VLWt0-8BOV4">https://www.youtube.com/watch?v=VLWt0-8BOV4</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80d2-905c-f0cd59e1507e" class=""><a href="https://www.youtube.com/watch?v=cTe5GsyhKUk">https://www.youtube.com/watch?v=cTe5GsyhKUk</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8045-98de-fc7d6669ed41" class=""><a href="https://www.youtube.com/watch?v=F6f5xWLNTiQ">https://www.youtube.com/watch?v=F6f5xWLNTiQ</a></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80ae-bf04-d472ef40a857"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b8-863e-ea38724726a3" class=""><strong><span style="border-bottom:0.05em solid">Configuration </span></strong></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8054-8603-d53add39a805" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80a7-8d4f-fc009bf29664" class=""><a href="https://www.youtube.com/watch?v=FDhndiAEyxs">https://www.youtube.com/watch?v=FDhndiAEyxs</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-805f-ba89-efcbe344efaf" class=""><a href="https://www.youtube.com/watch?v=sTqYRSJJQx4&amp;t=92s">https://www.youtube.com/watch?v=sTqYRSJJQx4&amp;t=92s</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-803d-b27f-dc79179284fe" class=""><a href="https://www.youtube.com/watch?v=z6NbfYT7oaw">https://www.youtube.com/watch?v=z6NbfYT7oaw</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8002-8106-f1f824b2d2f8" class=""><a href="https://www.youtube.com/watch?v=fUK6d3s1Im4">https://www.youtube.com/watch?v=fUK6d3s1Im4</a></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8046-8db5-f656b2a08950"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8014-9070-e711f086bf3d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80f3-bebf-d3c76b4952bf" class=""><strong><span style="border-bottom:0.05em solid">Understanding OUs, Domain, Trees, and Forests</span></strong></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8007-a0d6-f248a07f1689" class=""><a href="https://www.youtube.com/watch?v=7xOUsirYLYU">https://www.youtube.com/watch?v=7xOUsirYLYU</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8045-a901-cf62e108a5b3" class=""><a href="https://www.youtube.com/watch?v=QXI71bF3C0w">https://www.youtube.com/watch?v=QXI71bF3C0w</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80f1-8f44-dbb75a402804" class=""><a href="https://www.youtube.com/watch?v=IEkLX3Keu-w">https://www.youtube.com/watch?v=IEkLX3Keu-w</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b4-a544-d94c2c1322b0" class=""><a href="https://www.youtube.com/watch?v=zosB3bPyYkA">https://www.youtube.com/watch?v=zosB3bPyYkA</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-805a-b698-df6e5047e534" class=""><a href="https://www.youtube.com/watch?v=hOTj5rFxptU">https://www.youtube.com/watch?v=hOTj5rFxptU</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8019-a1a5-c4fb70b8ed0f" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-807c-a272-dde4164084ca"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8050-b648-d7d5bac333d7" class=""><strong><span style="border-bottom:0.05em solid">Best Practices and Security Tips </span></strong></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-803c-bb53-dc1bd24ae07a" class=""><a href="https://www.youtube.com/watch?v=Ncdyho-cQng">https://www.youtube.com/watch?v=Ncdyho-cQng</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-809c-bc3f-ff56fe1d0619" class=""><a href="https://www.youtube.com/watch?v=XDdLpZA4vCo">https://www.youtube.com/watch?v=XDdLpZA4vCo</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80e8-b51d-d7daa2776014" class=""><a href="https://www.youtube.com/watch?v=-zZKEsyKYn8&amp;list=PLmirIooNZgTceRTVLLyHnWeo9v8N15AX-">https://www.youtube.com/watch?v=-zZKEsyKYn8&amp;list=PLmirIooNZgTceRTVLLyHnWeo9v8N15AX-</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8088-8b58-daea0c054c7f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80a0-ab7c-e9a251697c9e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b3-89c6-ef6e029318e2" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

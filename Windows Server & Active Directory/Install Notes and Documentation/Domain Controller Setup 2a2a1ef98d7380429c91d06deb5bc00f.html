@@ -1,0 +1,265 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Domain Controller Setup</title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Install%20Notes%20and%20Documentation%202a1a1ef98d7380aea0eec5926deeb8f7.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a2a1ef9-8d73-8042-9c91-d06deb5bc00f" class="page sans"><header><h1 class="page-title" dir="auto">Domain Controller Setup</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80b5-85dc-dd9b085645cd"><a href="https://www.youtube.com/watch?v=sTqYRSJJQx4&amp;t=92s" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Setting up an Active Directory Domain Controller in Windows Server 2019</div><div class="bookmark-description">Installing Windows Server 2019 - https://youtu.be/5-h6URqCYio
+Installing VMs on ProxMox - https://youtu.be/ckPCl_B5gSc
+
+Updated Microsoft Security Best Practices: https://docs.microsoft.com/en-us/archive/blogs/secguide/security-baseline-final-for-windows-10-v1903-and-windows-server-v1903
+
+---------
+Facebook - https://www.facebook.com/H2DC-How-To-Do-Computers-108075255013728
+Twitter - https://twitter.com/how2docomputers
+Instagram - https://www.instagram.com/howtodocomputers/ NEW H2DC Discord - https://discord.gg/cvSj2QGXqw</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/3fd9a6f6/img/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=sTqYRSJJQx4&amp;t=92s</div></div><img src="https://i.ytimg.com/vi/sTqYRSJJQx4/maxresdefault.jpg" class="bookmark-image"/></a></figure></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8041-8eef-f08100bd6ab3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8047-ae6c-f09eb996bc13" class="">Go to Server Manager and add two roles: Active Directory Domain Services and DNS Server</p></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80a3-889f-e682af5dee9e" class=""><span style="border-bottom:0.05em solid">My Configuration:</span></h3></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807d-b5c2-d1e5d162e37a" class="bulleted-list"><li style="list-style-type:disc">Once that&#x27;s done, click &quot;Promote this server to a domain controller&quot;</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80e7-bbb5-f56ef4f3f0b8" class="bulleted-list"><li style="list-style-type:disc">&quot;Add a new forest&quot; </li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8053-a203-ebc06527ab9a" class="bulleted-list"><li style="list-style-type:disc">Named DC : test.lab</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8033-9d07-ffc5e9d7cb20" class="bulleted-list"><li style="list-style-type:disc">Set a restore mode password</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8053-abf5-f6276b0e36b7"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80e7-9ba4-c29c9feb0159" class=""><span style="border-bottom:0.05em solid">Promote to Domain Controller:</span></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80cb-ac84-ddc9c6385aaa" class="">In Server Manager, click notification flag (yellow warning triangle)</p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80de-917a-ce2e2effc9fe" class="bulleted-list"><li style="list-style-type:disc">Click <strong>&quot;Promote this server to a domain controller&quot;</strong></li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80fa-bba2-e817f421a4ab"/></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8056-bf21-edaf11e36658" class="numbered-list" start="1"><li><strong>Deployment:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8008-acff-c051065b5ced" class="bulleted-list"><li style="list-style-type:disc">Select <strong>&quot;Add a new forest&quot;</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c5-be87-ddfbea2bb739" class="bulleted-list"><li style="list-style-type:disc">Enter Root domain name: <strong>&quot;corp.contoso.com&quot;</strong></li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80fc-84ce-d082436ed055"/></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-806b-b1e9-f8d46b54b6e6" class="numbered-list" start="2"><li><strong>Domain Controller Options:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8032-a657-dc445dc94180" class="bulleted-list"><li style="list-style-type:disc"> <strong>&quot;Global Catalog (GC)&quot;</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-803e-83bd-c17126ee24b5" class="bulleted-list"><li style="list-style-type:disc">Enter Directory Services Restore Mode password</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8005-9da4-d94484859b60"/></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8026-9d03-e30be39fefc7" class="numbered-list" start="3"><li><strong>DNS Options:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80be-9339-f6b3a65e2cda" class="bulleted-list"><li style="list-style-type:disc">Ignore DNS delegation warning</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8078-8ab6-eb654e8b6f8e"/></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-807e-b059-c381002799e4" class="numbered-list" start="4"><li><strong>Additional Options:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8036-b5a8-f2c2590a219f" class="bulleted-list"><li style="list-style-type:disc">NetBIOS domain name: <strong>CORP</strong> (auto-filled)</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-808b-89eb-c6d4011ac26d"/></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8024-a917-c73f8454d569" class="numbered-list" start="5"><li><strong>Paths:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8094-8221-d17959609dab" class="bulleted-list"><li style="list-style-type:disc">Keep default paths for Database, Log files, and SYSVOL</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80de-9c18-f897b3850199"/></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80a6-93de-d9be5a353927" class="numbered-list" start="6"><li><strong>Review Options:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8029-b555-ca0ff2e10f0c" class="bulleted-list"><li style="list-style-type:disc">Review selections</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80e3-b193-dae78d144be3"/></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80e5-8cd3-fec7c9ae9930" class="numbered-list" start="7"><li><strong>Prerequisites Check:</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-806a-b92f-c7b934259393" class="bulleted-list"><li style="list-style-type:disc">Wait for prerequisite check to complete</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8049-ad6a-e74a556db909" class="numbered-list" start="8"><li><strong>restart</strong></li></ol></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80ee-871d-d1987111516d"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80c4-a22b-c0bc404eb37f" class=""><span style="border-bottom:0.05em solid">Login</span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8052-8c77-d72f730bbebb" class=""><strong>Login to the new domain</strong></p></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-806e-b5a6-c3304ea370fb" class="numbered-list" start="1"><li>Note the login shows: <strong>&quot;Sign in to: X&quot;</strong></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80ea-9fe0-dd424ee7b289" class="numbered-list" start="2"><li>Username is now: X<strong>\Administrator</strong><div style="display:contents" dir="auto"><ol type="a" id="2a2a1ef9-8d73-80fd-aa84-dd2fda7f623c" class="numbered-list" start="1"><li>Enter the Administrator password</li></ol></div></li></ol></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8011-8e5d-fcea61fc719d" class="bulleted-list"><li style="list-style-type:disc"> <strong>&quot;Domain Name System (DNS) server&quot;</strong></li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"><hr/><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Inline comments</summary><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">Go to Server Manager and add two roles: Active Directory Domain Services and DNS Server</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/AAcHTtfJatAP21GIzrplXYrWKLaQyIa1NP6BZq1uGUg2JMNzpw=s100" class="icon user-icon"/><span><b>Ryan Rasch</b> <time style="font-size:0.8em">Nov 5, 2025, 11:08 AM</time></span></span></div><div style="padding:0.2em">Can also allow for ADLDS and other services later </div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details></span></body></html>

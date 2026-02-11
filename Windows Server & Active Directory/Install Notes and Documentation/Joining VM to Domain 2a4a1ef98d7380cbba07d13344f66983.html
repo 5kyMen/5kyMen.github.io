@@ -1,0 +1,259 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Joining VM to Domain: </title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Install%20Notes%20and%20Documentation%202a1a1ef98d7380aea0eec5926deeb8f7.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a4a1ef9-8d73-80cb-ba07-d13344f66983" class="page sans"><header><h1 class="page-title" dir="auto">Joining VM to Domain: </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-806b-8926-efadd4352920" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2a4a1ef9-8d73-80ef-8544-ecaa391981e2" class="">Step 1: Set Network Configuration</h2></div><div style="display:contents" dir="auto"><h3 id="2a4a1ef9-8d73-8060-92de-f79604e9991e" class=""><strong>Configure DNS</strong></h3></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-8048-8c8d-cb48c82edbf7" class=""><code>IPv4 Properties:<br/>   - IP: 192.168.1.x <br/>   - Subnet: 255.255.255.0<br/>   - Gateway: 192.168.1.1<br/>   - DNS: [YOUR DC&#x27;s IP - e.g., 192.168.1.10]<br/>   - Alternate DNS: Leave blank or 8.8.8.8</code></p></div><div style="display:contents" dir="auto"><hr id="2a4a1ef9-8d73-802e-828f-f8da8aacfec3"/></div><div style="display:contents" dir="auto"><h2 id="2a4a1ef9-8d73-804a-88b3-f0d1649fb495" class="">Step 2: Test DNS Before Joining</h2></div><div style="display:contents" dir="auto"><h3 id="2a4a1ef9-8d73-80e0-aae5-d10fcc6e02c7" class=""><strong>In Command Prompt:</strong></h3></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-80b7-90a6-cfcc77b00f20" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-8085-b14f-c074a9e522ed" class=""><em><code># Test DNS resolution</code></em><code><br/>nslookup lab.local<br/></code><em><code># Should return your DC&#x27;s IP</code></em><code><br/><br/>ping dc01.lab.local<br/></code><em><code># Should ping successfully</code></em><code><br/><br/>nslookup -type=srv _ldap._tcp.lab.local<br/></code><em><code># Should show your DC</code></em><code><br/>```<br/><br/>**If these fail, STOP! Fix DNS first.**<br/><br/>---<br/><br/></code><em><code>## Step 3: Join the Domain### **Method A: GUI (Easiest)**</code></em><code><br/>```<br/>1. Right-click &quot;This PC&quot; → Properties<br/>2. Click &quot;Rename this PC (advanced)&quot;<br/>3. Click &quot;Change&quot; button<br/>4. Select &quot;Domain&quot; radio button<br/>5. Type: lab.local<br/>6. Click OK<br/>7. Enter credentials:<br/>   - Username: Administrator<br/>   - Password: [your DC admin password]<br/>8. &quot;Welcome to the lab.local domain!&quot;<br/>9. Restart required</code></p></div><div style="display:contents" dir="auto"><h3 id="2a4a1ef9-8d73-8054-a428-c10d6ef90a3a" class=""><strong>Method B: PowerShell</strong></h3></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-8026-b8ef-dc836951a543" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-80e6-ae76-d6cbcbb2eec0" class=""><em><code># Run as Administrator</code></em><code><br/>Add-Computer -DomainName &quot;lab.local&quot; -Credential LAB\Administrator -Restart<br/><br/></code><em><code># When prompted, enter admin password</code></em><code><br/>```<br/><br/></code><em><code>### **Method C: Settings App (Windows 10/11)**</code></em><code><br/>```<br/>1. Settings → Accounts → Access work or school<br/>2. Click &quot;Connect&quot;<br/>3. &quot;Join this device to a local Active Directory domain&quot;<br/>4. Domain name: lab.local<br/>5. Enter LAB\Administrator credentials<br/>6. Restart<br/>```<br/><br/>---<br/><br/></code><em><code>## Step 4: After Restart### **Login with Domain Account:**</code></em><code><br/>```<br/>At login screen:<br/>- Click &quot;Other user&quot;<br/>- Username: LAB\bsmith<br/>  or: bsmith@lab.local<br/>- Password: P@ssw0rd123!</code></p></div><div style="display:contents" dir="auto"><hr id="2a4a1ef9-8d73-80e3-bef1-d62091e7d4ef"/></div><div style="display:contents" dir="auto"><h2 id="2a4a1ef9-8d73-8048-90f5-dbc5bfde4725" class="">Step 5: Move Computer to Correct OU</h2></div><div style="display:contents" dir="auto"><h3 id="2a4a1ef9-8d73-807d-829f-efeb82a17e47" class=""><strong>On your Domain Controller:</strong></h3></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-80b1-a49b-c14af7e7976e" class="">powershell</p></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-80b4-acd4-e7313402d4c3" class=""><em><code># Check where computer landed</code></em><code><br/>Get-ADComputer -Filter * | Select Name, DistinguishedName<br/><br/></code><em><code># Move to correct OU (example)</code></em><code><br/>Move-ADComputer -Identity &quot;COMPUTER1&quot; `<br/>  -TargetPath &quot;OU=TestComputers,OU=LAB,DC=lab,DC=local&quot;<br/>```<br/><br/>Or via GUI:<br/>```<br/>1. On DC: Active Directory Users and Computers<br/>2. Expand lab.local → Computers container<br/>3. Find new computer<br/>4. Right-click → Move → Select target OU<br/>```<br/><br/>---<br/><br/></code><em><code>## Common Issues &amp; Fixes### **&quot;Domain cannot be contacted&quot;**</code></em><code><br/>```<br/>Fix: Check DNS!<br/>- Must use DC&#x27;s IP as DNS<br/>- ipconfig /all - verify DNS server<br/>- Try: ipconfig /flushdns<br/>```<br/><br/>### **&quot;The specified domain does not exist&quot;**<br/>```<br/>Fix: <br/>- Verify domain name: lab.local (not just &quot;lab&quot;)<br/>- Check network connectivity to DC<br/>- Ensure DC is running<br/>```<br/><br/>### **&quot;Access Denied&quot;**<br/>```<br/>Fix:<br/>- Use: LAB\Administrator or Administrator@lab.local<br/>- Check password<br/>- Ensure account isn&#x27;t locked<br/>```<br/><br/></code><em><code>### **&quot;Network path not found&quot;**</code></em><code><br/>```<br/>Fix:<br/>- Windows Firewall blocking<br/>- Temporarily disable firewall on both machines<br/>- Check network profile (should be Private/Domain, not Public)</code></p></div><div style="display:contents" dir="auto"><hr id="2a4a1ef9-8d73-80d3-8f74-c0b0dc008a9c"/></div><div style="display:contents" dir="auto"><h2 id="2a4a1ef9-8d73-809f-851a-d5fa865b787c" class="">Quick Troubleshooting Commands</h2></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-80c7-8f65-c2ff38ee80d9" class="">powershell</p></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-8005-bd46-dead820914d7" class=""><em><code># On the computer trying to join:# Check DNS</code></em><code><br/>ipconfig /all<br/>nslookup lab.local<br/><br/></code><em><code># Test DC connectivity</code></em><code><br/>ping 192.168.1.10  </code><em><code># Your DC IP</code></em><code><br/>Test-NetConnection -ComputerName dc01.lab.local -Port 445<br/>Test-NetConnection -ComputerName dc01.lab.local -Port 135<br/><br/></code><em><code># Reset if needed</code></em><code><br/>ipconfig /release<br/>ipconfig /renew<br/>ipconfig /flushdns<br/>```<br/><br/>---<br/><br/></code><em><code>## After Successfully Joining</code></em><code><br/><br/>You can:<br/>1. **Login with domain users** (LAB\bsmith, etc.)<br/>2. **GPOs will apply** (your legal notice should appear!)<br/>3. **Access domain resources**<br/>4. **See computer in AD**<br/><br/>---<br/><br/></code><em><code>## Your Specific Setup</code></em><code><br/><br/>For your lab.local domain:<br/>```<br/>Domain: lab.local<br/>NetBIOS: LAB<br/>Admin: LAB\Administrator<br/>Users: LAB\bsmith, LAB\ajones, LAB\cbrown<br/>DC IP: [Your DC&#x27;s IP - check with ipconfig on DC]</code></p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,260 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Concepts and Definitions To Learn </title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Windows%20Server%20&%20Active%20Directory.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="29ea1ef9-8d73-8084-98b8-c23e40127a03" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/webb4.jpg" style="object-position:center 50%"/><h1 class="page-title" dir="auto">Concepts and Definitions To Learn </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80c0-bb25-cfd9c1afc64a"/></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-801d-8bb5-c331dfb971bf"/></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8010-a1be-edb91f0b2244" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/General%20Domain%20and%20AD%20Notes%202a2a1ef98d738010a1beedb91f0b2244.html">General Domain and AD Notes</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-806b-9da9-c87ba81dbf41"/></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8002-ab5a-f9da88cf4484" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/Understanding%20WS%20Domain%20and%20DNS%202a2a1ef98d738002ab5af9da88cf4484.html">Understanding WS Domain and DNS</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8055-8c48-c2da63cc161e"/></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-809f-b52b-fac391e5ce62" class="block-color-default_background link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/What%20is%20a%20forest%202a2a1ef98d73809fb52bfac391e5ce62.html">What is a forest?</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-801b-922f-d375f051f73f"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-809d-a3db-d674c1544f23" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/LDAP%20and%20Other%20AD%20Services%2029ea1ef98d73809da3dbd674c1544f23.html">LDAP and Other AD Services  </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-803b-ac56-f4226fe6435c"/></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80b4-9dc7-f641d578cf00" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/Organizational%20Units%20(OUs)%202a2a1ef98d7380b49dc7f641d578cf00.html">Organizational Units (OUs)</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80bd-a6e1-df4042d4a458"/></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8008-b7d8-f9278da3f39f" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/Users,%20Admins,%20Groups,%20and%20Permissions%202a2a1ef98d738008b7d8f9278da3f39f.html">Users, Admins, Groups, and Permissions </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80bc-a5b2-f28a190e4e8a"/></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80a2-9474-c4b6778ba0c4" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/FSMO%20Roles%202a2a1ef98d7380a29474c4b6778ba0c4.html">FSMO Roles</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8068-8dd0-c21de80a79af"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8040-87eb-e17ae895cb23" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid">(TODO)</span></mark></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80a0-a68b-e8c540a839cc"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-807f-ba37-e7fa9ecb6028" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/Registry%2029ea1ef98d73807fba37e7fa9ecb6028.html"> Registry</a></figure></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80c2-8327-fc75b5b18e53" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/Troubleshooting%202a2a1ef98d7380c28327fc75b5b18e53.html">Troubleshooting</a></figure></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8049-bf92-f2198477c452" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/Auditing%202a2a1ef98d738049bf92f2198477c452.html">Auditing</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-806e-9bb1-e71766f2db84"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-80ab-adf6-f0cef7ea93b4" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/PKI%20Certificate%20Services%2029ea1ef98d7380abadf6f0cef7ea93b4.html">PKI/Certificate Services</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-809d-939b-c93ae1f879df"/></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8036-a4d1-d36689d8dedf" class="link-to-page"><a href="Concepts%20and%20Definitions%20To%20Learn/General%20security%20practice%20(todo)%202a2a1ef98d738036a4d1d36689d8dedf.html">General security practice (todo) </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-808b-b37a-f3b572f473de"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8077-b52f-f30072cd6e8d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-809a-84f1-f16936405983" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-801c-8f83-f734dec8e43e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8089-8f94-c8beff86328b" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

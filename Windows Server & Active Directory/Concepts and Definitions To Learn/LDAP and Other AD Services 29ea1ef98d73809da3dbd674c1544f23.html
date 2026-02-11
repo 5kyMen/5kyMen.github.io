@@ -1,0 +1,259 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>LDAP and Other AD Services  </title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="29ea1ef9-8d73-809d-a3db-d674c1544f23" class="page sans"><header><h1 class="page-title" dir="auto">LDAP and Other AD Services  </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="2a2a1ef9-8d73-8050-b56e-c4f5596969a0" class=""><span style="border-bottom:0.05em solid">When and why is each needed?</span> </h2></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-803a-a7f6-d33fb3354ce0" class=""><mark class="highlight-red">LDAP - ESSENTIAL</mark><br/><strong>Certificate Services (AD CS)</strong></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-807d-b923-d6d4514d9c61" class=""><strong><span style="border-bottom:0.05em solid">Only if you need:</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8040-892b-c081eb3eeda5" class="bulleted-list"><li style="list-style-type:disc">Smart card logins</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8046-bc0e-e79218e1c01f" class="bulleted-list"><li style="list-style-type:disc">Internal SSL certificates</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807c-8791-d0d958d4e9bc" class="bulleted-list"><li style="list-style-type:disc">Email encryption</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8060-8123-d2f9f80f8050" class="bulleted-list"><li style="list-style-type:disc">WiFi authentication</li></ul></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8057-a7a9-fc9ac2c03ed8" class=""><strong>Federation Services (AD FS)</strong></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8091-bb9e-cde09a3f3bd3" class=""><strong><span style="border-bottom:0.05em solid">Only if you need:</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8039-af59-eb11f5f755f7" class="bulleted-list"><li style="list-style-type:disc">Office 365 single sign-on (though Azure AD Connect is preferred now)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-808c-a5dc-f9dc1d45af75" class="bulleted-list"><li style="list-style-type:disc">Partner company integrations</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8041-abe7-da98758f6a51" class="bulleted-list"><li style="list-style-type:disc">Complex web app SSO</li></ul></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8043-a7c5-cf674ffea125" class=""><strong>Global Catalog</strong></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80dd-b8a5-e9fad5ae43b5" class=""><strong><span style="border-bottom:0.05em solid">Automatic with AD, but additional GCs needed only if:</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80e2-b925-ffdabf46addb" class="bulleted-list"><li style="list-style-type:disc">Multiple sites/locations</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80f9-a8b3-caa9d4dc72ae" class="bulleted-list"><li style="list-style-type:disc">Slow WAN links</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ea-8303-e61a90998888" class="bulleted-list"><li style="list-style-type:disc">Many domains in forest</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-809f-8c9b-ef17acd1d39f"/></div><div style="display:contents" dir="auto"><h3 id="29ea1ef9-8d73-8059-b3e0-f23e0eb05f79" class=""><span style="border-bottom:0.05em solid">Lightweight directory Access protocol (LDAP)</span></h3></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-802b-a2d0-d84cef256e8f" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Active Directory</span></strong><span style="border-bottom:0.05em solid">: The database and service provider</span><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-808d-b2de-e0f79c2c1f4d" class="bulleted-list"><li style="list-style-type:circle">Stores actual directory data</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-803f-a12d-c77a66057336" class="bulleted-list"><li style="list-style-type:circle">Manages security policies</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8065-a066-c3811605a401" class="bulleted-list"><li style="list-style-type:circle">Handles replication between domain controllers</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8028-87f3-e18492d931d8" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">LDAP</span></strong><span style="border-bottom:0.05em solid">: The communication protocol</span><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8095-b6e5-f288c98f5f9d" class="bulleted-list"><li style="list-style-type:circle">Provides the language for queries</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a9-9f03-c8d9a36128de" class="bulleted-list"><li style="list-style-type:circle">Standardizes access methods</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80f5-beee-fbe45af1d680" class="bulleted-list"><li style="list-style-type:circle">Enables cross-platform compatibility</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-809a-9576-edcb1bbf24af"/></div><div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-8078-b273-f9520ab3f735" class="bulleted-list"><li style="list-style-type:disc">Protocol for communicating with active directory over the web </li></ul></div><div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-8073-9a91-dc933a5c56ed" class="bulleted-list"><li style="list-style-type:disc">Can query information from a directory such as: <div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-8064-b5c7-e76f518b6bad" class="bulleted-list"><li style="list-style-type:circle">ex: user information, email addresses, or permissions</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-8090-946c-e6313ef3b33f" class="bulleted-list"><li style="list-style-type:disc">Active directory provides the actually directories and services while LDAP is a way to request/modify that information</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80ad-b174-e0b9da50fe5d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80ce-8ac0-cc88e212a39d" class=""><span style="border-bottom:0.05em solid">Why is it needed for AD: </span></p></div><div style="display:contents" dir="auto"><ul id="29ea1ef9-8d73-8090-8e6c-de209ec29eb9" class="bulleted-list"><li style="list-style-type:disc">Gives other devices standard ways to communicate with AD (compatibility with Linux/mac/etc)</li></ul></div><div style="display:contents" dir="auto"><hr id="29ea1ef9-8d73-8041-af31-eb8b2111995f"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8076-83dc-d22e9c41ea44" class=""><strong><span style="border-bottom:0.05em solid">Certificate Services (AD CS)</span></strong></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8076-b4ed-d635b62314f3" class=""><strong><span style="border-bottom:0.05em solid">Purpose</span></strong>: Public Key Infrastructure (PKI) for the domain</p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8064-b2a8-d1960ead0842" class="bulleted-list"><li style="list-style-type:disc"><strong>Root CA</strong>: Top of certificate hierarchy</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8055-8d53-fb7715204bc6" class="bulleted-list"><li style="list-style-type:disc"><strong>Subordinate CAs</strong>: Issue end-user certificates</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ef-a1ea-f3fc29569178" class="bulleted-list"><li style="list-style-type:disc"><strong>Certificate Templates</strong>: Define certificate properties</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a1-a80b-dd0139e7ea1a" class="bulleted-list"><li style="list-style-type:disc"><strong>Web Enrollment</strong>: Browser-based certificate requests</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80cb-8197-c960ef2baa44" class=""><strong><span style="border-bottom:0.05em solid">Uses</span></strong><span style="border-bottom:0.05em solid">:</span></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8031-b86e-e4c95142afe8" class="bulleted-list"><li style="list-style-type:disc">Smart card authentication</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-808b-a1d1-eee9065d9756" class="bulleted-list"><li style="list-style-type:disc">Email encryption (S/MIME)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c3-a41f-f9968d22e1d3" class="bulleted-list"><li style="list-style-type:disc">SSL certificates for internal websites</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807a-9074-cdf32d086d19" class="bulleted-list"><li style="list-style-type:disc">802.1x authentication</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c4-b3f4-c00452deb997" class="bulleted-list"><li style="list-style-type:disc">Code signing</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80fe-8386-e1fbd0454604"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8028-8fe1-e3a59349358a" class=""><span style="border-bottom:0.05em solid">Federation Services (AD FS)</span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-808c-934f-f71e58455e55" class=""><strong><span style="border-bottom:0.05em solid">Purpose</span></strong>: Single Sign-On across organizational boundaries</p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ae-9e0f-ef91a9a1eba5" class="bulleted-list"><li style="list-style-type:disc"><strong>Claims-based Authentication</strong>: Attribute assertions</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8039-ba5c-f15d11ff87ea" class="bulleted-list"><li style="list-style-type:disc"><strong>SAML/OAuth Support</strong>: Industry standard protocols</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8057-b4bb-d0e8d995ac32" class="bulleted-list"><li style="list-style-type:disc"><strong>Web Application Proxy</strong>: Secure external access</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8082-91cb-cc6792dc716d" class="bulleted-list"><li style="list-style-type:disc"><strong>Multi-Factor Authentication</strong>: Enhanced security</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80f1-bab0-d396ebdfec43" class=""><strong><span style="border-bottom:0.05em solid">Use Cases</span></strong><span style="border-bottom:0.05em solid">:</span></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80d1-8b46-c63b99173a2e" class="bulleted-list"><li style="list-style-type:disc">Office 365 hybrid deployments</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8030-87ed-da127725e336" class="bulleted-list"><li style="list-style-type:disc">Partner organization collaboration</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8099-ba2d-ff93b5926106" class="bulleted-list"><li style="list-style-type:disc">SaaS application integration</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c8-810f-f6d098e4a634" class="bulleted-list"><li style="list-style-type:disc">B2B/B2C scenarios</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80e8-b87c-c98d3bf11179"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8019-b944-c28f0535521a" class=""><span style="border-bottom:0.05em solid">Global Catalog (GC)</span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-802d-98cf-eace0c57b2de" class=""><strong><span style="border-bottom:0.05em solid">Purpose</span></strong>: Partial replica of all objects in the AD forest</p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-802d-b1a4-ea34ea9e3441" class="bulleted-list"><li style="list-style-type:disc"><strong>Port 3268</strong> (3269 for SSL)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8029-bce8-d932e6482061" class="bulleted-list"><li style="list-style-type:disc">Contains subset of attributes for all forest objects</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80d5-88db-f837fc8bef4e" class="bulleted-list"><li style="list-style-type:disc">Enables forest-wide searches</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8077-b30d-d5bf2e045ee1" class="bulleted-list"><li style="list-style-type:disc">Critical for Universal Group membership</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8041-a4e2-da1b45b7f8d1" class="bulleted-list"><li style="list-style-type:disc">Required for user logon (UPN resolution)</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80af-b1e9-ef3fb21a6cf6" class=""><strong><span style="border-bottom:0.05em solid">Use Cases</span></strong><span style="border-bottom:0.05em solid">:</span></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a1-be18-c7fc69982cf5" class="bulleted-list"><li style="list-style-type:disc">Cross-domain queries</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8085-ab81-fc598f3de38a" class="bulleted-list"><li style="list-style-type:disc">Exchange Address Book</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c3-aa1f-cec68e8cc212" class="bulleted-list"><li style="list-style-type:disc">Universal Group enumeration</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8043-8b55-f674209ddb8f" class="bulleted-list"><li style="list-style-type:disc">User Principal Name authentication</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8068-be91-eaf65ba6974c"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-806b-9050-e4bfddf53ff8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-809e-8bd2-c53ad1d26ed2" class=""><div class="indented"><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-80c0-9c5e-f895f33dbd27" class="">  </p></div></div></p></div><div style="display:contents" dir="auto"><p id="29ea1ef9-8d73-803b-a898-f05cf5b7e160" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

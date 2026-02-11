@@ -1,0 +1,260 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Organizational Units (OUs)</title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a2a1ef9-8d73-80b4-9dc7-f641d578cf00" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_canaletto_1720.jpg" style="object-position:center 50%"/><h1 class="page-title" dir="auto">Organizational Units (OUs)</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80ce-8ef4-fc9332d2fa16"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8056-acce-ff066b6c4b6b" class=""><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts">https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8033-bd05-d740acfc5c78" class=""><a href="https://learn.microsoft.com/en-us/answers/questions/1663568/ou-permissions">https://learn.microsoft.com/en-us/answers/questions/1663568/ou-permissions</a></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8010-ab82-de7454165234"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80cd-9810-cfa126e3939d" class=""><a href="https://medium.com/@ihouelecaurcy/mastering-organizational-units-ous-in-windows-server-structure-strategy-best-practices-94bd74f4a22c">https://medium.com/@ihouelecaurcy/mastering-organizational-units-ous-in-windows-server-structure-strategy-best-practices-94bd74f4a22c</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80c5-9b01-cb75f2887ee1" class=""><a href="https://community.spiceworks.com/t/how-to-organize-computers-to-ou-in-active-directory-to-link-gpos/1087953">https://community.spiceworks.com/t/how-to-organize-computers-to-ou-in-active-directory-to-link-gpos/1087953</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8016-a8a5-d7cd4e4964c3" class=""><a href="https://www.techtarget.com/searchwindowsserver/definition/organizational-unit-OU">https://www.techtarget.com/searchwindowsserver/definition/organizational-unit-OU</a></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80c4-a440-f1f7a1a847ae"/></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8063-90a4-eaa246b49293" class="bulleted-list"><li style="list-style-type:disc">Containers for organizing AD objects (users, computers, groups)<div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8036-b4fc-ef2e757ebfcd" class="bulleted-list"><li style="list-style-type:circle">cannot assign permissions to OUs themselves</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-805c-84e3-ef320bae97af" class="bulleted-list"><li style="list-style-type:disc">Used for administrative delegation and Group Policy applications</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-801d-bc8b-e46304b9390f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80a6-8c38-c884442f9bc7" class=""><span style="border-bottom:0.05em solid">Personal Definition: </span><div class="indented"><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8037-bff5-ebdf22fccd58" class=""><mark class="highlight-blue">Organizational Units (OUs) are containers that can hold users, groups, and computers. They are the smallest unit to which we can assign group policy to; allow for hierarchical organization </mark></p></div></div></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8039-9e2d-f5cc82ed1a40"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b1-81c5-d2fad47bead9" class=""><mark class="highlight-default"><span style="border-bottom:0.05em solid">Built-in OUs in Domain Services:</span></mark></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8006-8308-f4a4cd29c343" class="">AADDC Computers - Contains computer objects for all domain-joined computers<br/>AADDC Users - Includes users and groups synchronized from the Microsoft Entra tenant</p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-805f-974e-edad0e577107"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80a5-9520-faca3d817a8a" class=""><mark class="highlight-default"><strong><span style="border-bottom:0.05em solid">Common (example) OU Structure</span></strong></mark></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8074-a83b-fffa1917d636" class=""><mark class="highlight-orange">(imported from web diagram)</mark></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8000-884f-f917d696fada" class=""><code>Domain Root<br/>├── Users (default container - not an OU)<br/>├── Computers (default container - not an OU)<br/>├── Domain Controllers (OU)<br/>├── Corporate (custom OU)<br/>│   ├── Users<br/>│   │   ├── IT Department<br/>│   │   ├── HR Department<br/>│   │   └── Sales Department<br/>│   ├── Computers<br/>│   │   ├── Workstations<br/>│   │   ├── Laptops<br/>│   │   └── Servers<br/>│   └── Groups<br/>│       ├── Security Groups<br/>│       └── Distribution Groups<br/>└── Service Accounts (custom OU)</code></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-803b-8446-ed048707b6f1"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8035-b071-ff287702b654" class="block-color-default"><strong><span style="border-bottom:0.05em solid">Structure:</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-809a-a0d0-dadedf0515d0" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Domain Root</span></strong> - The top level of the structure, representing the <strong>entire</strong> domain</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-809b-a5fb-d46566a99d9f" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Containers vs OUs</span></strong> - Items marked as &quot;default container&quot; are built-in and cannot have Group Policies applied; custom OUs can have policies</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8060-89db-d46d5dc7151e" class="block-color-default"><strong><span style="border-bottom:0.05em solid">Components</span></strong><strong>:</strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801c-a3d8-fa301be8d0f8" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Corporate OU</span></strong> - Main custom organizational unit that houses all company-specific objects, </li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8096-8907-e9b188c644dc" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Departmental structure</span></strong> - Users and general departments (IT, HR, Sales) allow different policies </li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8015-8977-ccc7d0b90a4d" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Computer organization</span></strong><span style="border-bottom:0.05em solid"> </span>- Workstations, Laptops, and Servers </li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-802c-8608-e321e06506eb" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Groups location</span></strong> - Security Groups (for permissions) and Distribution Groups (for email) </li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80c5-be39-d08e09b42488" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Service Accounts OU</span></strong><span style="border-bottom:0.05em solid"> -</span> Isolated at root level for special accounts that applications use</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8094-9d48-f560e5dbee7c" class="block-color-default"><strong><span style="border-bottom:0.05em solid">Policy &amp; Management :</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801c-a8d4-e95e98407eb4" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Inheritance flow</span></strong><span style="border-bottom:0.05em solid"> </span>- Policies applied to &quot;Corporate&quot; flow down to all sub-OUs unless </li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-806e-a9e1-fb167417fee9" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Administrative delegation</span></strong> - Each OU can have different admins </li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8054-afab-f1a71b9bbbf5" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">GPO application</span></strong> - Group Policies can be linked at any OU level and affect all objects within and below</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80db-adb3-f67f670b1809" class="block-color-default"><strong><span style="border-bottom:0.05em solid">Design :</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8086-bd54-f322c445c92f" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Logical grouping</span></strong><span style="border-bottom:0.05em solid"> </span>- Structure mirrors real-world organization (departments, device types) for easier management</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-800e-b63f-cb05c45151ef" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Security boundary</span></strong> - Each OU can have unique security settings, password policies, and access controls</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8052-b470-c6951387305a" class="block-color-default bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Scalability design</span></strong> - Structure allows easy addition of new departments or computer types without reorganizing existing OUs</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-807b-8765-e9f45de6da1b"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b4-91df-e2075d6b1877" class=""><strong><span style="border-bottom:0.05em solid">MANAGEMENT TOOLS AND EXAMPLES </span></strong></p></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8004-9c05-f6ce030dbda1"><a href="https://learn.microsoft.com/en-us/entra/identity/domain-services/create-ou" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Create an organizational unit (OU) in Microsoft Entra Domain Services - Microsoft Entra ID</div><div class="bookmark-description">Learn how to create and manage a custom Organizational Unit (OU) in a Microsoft Entra Domain Services managed domain.</div></div><div class="bookmark-href"><img src="https://learn.microsoft.com/favicon.ico" class="icon bookmark-icon"/>https://learn.microsoft.com/en-us/entra/identity/domain-services/create-ou</div></div><img src="https://learn.microsoft.com/en-us/media/open-graph-image.png" class="bookmark-image"/></a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80d3-9af8-d15fb73380c0"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8080-8ee3-f27fbdcaa7f2" class=""><span style="border-bottom:0.05em solid">BEST PRACTICES: </span></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8062-82f1-d3220b9753f7" class="block-color-red">TO DO</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-801f-939f-f93e8135db9e" class=""><a href="https://learn.microsoft.com/en-us/previous-versions/technet-magazine/cc462797(v=msdn.10)?redirectedfrom=MSDN">https://learn.microsoft.com/en-us/previous-versions/technet-magazine/cc462797(v=msdn.10)?redirectedfrom=MSDN</a></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80d5-b0d8-e68e38b50d1b" class="bulleted-list"><li style="list-style-type:disc"></li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-806a-b902-d830fd87f4b7"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8035-8650-d362bf61e6d7" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80ab-ba71-cd8417301119"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-800a-97de-cae6977e919e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8038-9d8b-fb8d54bafec4" class=""><span style="border-bottom:0.05em solid">WRITING MY OWN GROUP POLICY: </span></p></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8021-8dda-f650d4f5e7ce"><a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj717274(v=ws.11)" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Create a Group Policy Object</div><div class="bookmark-description">Access to this page requires authorization. You can try signing in or changing directories.</div></div><div class="bookmark-href"><img src="https://learn.microsoft.com/favicon.ico" class="icon bookmark-icon"/>https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj717274(v=ws.11)</div></div><img src="https://learn.microsoft.com/en-us/media/open-graph-image.png" class="bookmark-image"/></a></figure></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8078-9f9d-f5973f19ff0b" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

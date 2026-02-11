@@ -1,0 +1,264 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>DHCP WS SETUP </title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Install%20Notes%20and%20Documentation%202a1a1ef98d7380aea0eec5926deeb8f7.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a2a1ef9-8d73-80ee-98b1-f0231f3bfd6a" class="page sans"><header><img class="page-cover-image" src="DHCP%20WS%20SETUP/sisyphus-jeffrey-hummel.jpg" style="object-position:center 39.83%"/><h1 class="page-title" dir="auto">DHCP WS SETUP </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-802b-b314-d2bb30550363"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8093-8891-efc5c164b3f9" class=""><a href="https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/quickstart-install-configure-dhcp-server?tabs=powershell">https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/quickstart-install-configure-dhcp-server?tabs=powershell</a></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80d9-a58a-d2cf2bae8d1e"/></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80fd-bd40-cfa8a5a6ed00" class="bulleted-list"><li style="list-style-type:disc">Must be after Static IP address config done and new admin made </li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-802c-8548-ce1f7fb99c60"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80c9-bbb1-d0c8788c7809" class=""><span style="border-bottom:0.05em solid">Server Manager </span></h3></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-805f-8bfe-fda633c81f95" class="numbered-list" start="1"><li>Add Roles and Features</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8093-a236-fa51b2a01cfd" class="numbered-list" start="2"><li>DHCP Server role</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8059-9b5c-c965d643e594" class="numbered-list" start="3"><li>Installation wizard</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80b2-8bf5-e6f598f23abb" class="numbered-list" start="4"><li>Small follow-the-wizard post-deploy config after restart  :) </li></ol></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-807c-8201-fbaf7a3b188d"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80e1-a44d-d5b03698760b" class=""><span style="border-bottom:0.05em solid">Authorizing DHCP Server in AD</span></h3></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8065-bb85-cd47d0e955bd" class="numbered-list" start="1"><li> Server Manager</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80e9-8a53-e950f9133cfe" class="numbered-list" start="2"><li>Tools → DHCP</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80a9-ba3b-efaa5dd99768" class="numbered-list" start="3"><li>Right-click server name</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8063-8de4-c6225361c46d" class="numbered-list" start="4"><li>Select &quot;Authorize&quot;</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8096-948d-ce64a8ebe75d" class="numbered-list" start="5"><li>Refresh to verify green checkmark appears</li></ol></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80f0-b028-dc45c7ea7109"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8083-8a36-e9bd03f15a62" class=""><span style="border-bottom:0.05em solid">Scope </span></h3></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8010-b78d-d6b7ab6311f5" class="">Creating an IPv4 Scope</h3></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8076-a10b-e0498bca8026" class="numbered-list" start="1"><li>Open DHCP Management Console</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80d5-9b58-d5d356b302a6" class="numbered-list" start="2"><li>Right-click IPv4 → New Scope</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-809e-97d3-c2d9ca0510ea" class="numbered-list" start="3"><li>Follow New Scope Wizard:<div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8094-9c51-c240331aca69" class="bulleted-list"><li style="list-style-type:disc">Enter scope name and description</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ca-b105-e295f795526e" class="bulleted-list"><li style="list-style-type:disc">Define IP address range</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8025-b576-dfe1f7082b9e" class="bulleted-list"><li style="list-style-type:disc">You can also add exclusions <em><mark class="highlight-blue">RESEARCH MORE</mark></em></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8073-b2e0-c6cfeef8ec79" class="bulleted-list"><li style="list-style-type:disc">Set lease duration</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8075-b22b-cb34c4be7d2d" class="bulleted-list"><li style="list-style-type:disc">Configure DHCP options</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8031-90e0-e0818d9fa11c" class="bulleted-list"><li style="list-style-type:disc">Activate scope</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8024-98e2-c0b7c6ef726d"/></div><div style="display:contents" dir="auto"><h2 id="2a2a1ef9-8d73-803b-befe-f97189d2ca9d" class=""><span style="border-bottom:0.05em solid">Scope Options </span><mark class="highlight-red"><span style="border-bottom:0.05em solid">(TO DO NEXT!!) </span></mark></h2></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-805c-9c9d-eeb851f6de28" class="">Configuring Options via PowerShell</h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80ee-9318-d83ca5bcf2f7" class=""><strong>Set DNS servers for a scope</strong>:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2a2a1ef9-8d73-80fe-8a13-d6bced993509" class="code code-wrap"><code class="language-PowerShell" style="white-space:pre-wrap;word-break:break-all">Set-DhcpServerv4OptionValue -ScopeId 192.168.15.0 `
+    -OptionId 6 `
+    -Value &quot;192.168.15.10&quot;, &quot;192.168.15.11&quot;
+</code></pre></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8024-abe3-d81c4c93a0d3" class=""><strong>Set default gateway</strong>:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2a2a1ef9-8d73-8044-a31f-e0f085074d9b" class="code code-wrap"><code class="language-PowerShell" style="white-space:pre-wrap;word-break:break-all">Set-DhcpServerv4OptionValue -ScopeId 192.168.15.0 `
+    -OptionId 3 `
+    -Value &quot;192.168.15.1&quot;
+</code></pre></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8021-92e1-ff1561f6f57e"/></div><div style="display:contents" dir="auto"><h2 id="2a2a1ef9-8d73-8083-9b0e-e1f03f981055" class="">Reservations</h2></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80f5-9713-e53ab0540345"/></div><div style="display:contents" dir="auto"><h2 id="2a2a1ef9-8d73-8078-ac49-d582ecb20d22" class="">Exclusions</h2></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8030-bc7b-c82353263a7c"/></div><div style="display:contents" dir="auto"><h2 id="2a2a1ef9-8d73-80e5-9c4e-ec632c937747" class=""><span style="border-bottom:0.05em solid">Best Practices</span></h2></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8070-81c2-f3e233ce3cc3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-802b-a56a-ecc7fbb28ac8" class=""><span style="border-bottom:0.05em solid">Planning </span></p></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8013-a7e3-f5b21cc570c4" class="numbered-list" start="1"><li><strong>IP Address Planning</strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80f7-a6da-d1fb5eea1e8b" class="bulleted-list"><li style="list-style-type:disc">Reserve first 10-20 IPs for static devices (servers, printers, network equipment)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8021-bbba-db7e63612812" class="bulleted-list"><li style="list-style-type:disc">Size scope appropriately (consider 20-30% growth)</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80a1-8f0d-f68444e8eae8" class="bulleted-list"><li style="list-style-type:disc">Document IP allocation strategy</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-80b3-b4f4-e6897469c9ab" class="numbered-list" start="2"><li><strong><span style="border-bottom:0.05em solid">Lease</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-809f-aa6d-c852153f680e" class="bulleted-list"><li style="list-style-type:disc">Desktop/laptop networks: 8-24 hours</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80b2-abd3-c4d235f22cdc" class="bulleted-list"><li style="list-style-type:disc">Guest networks: 1-2 hours</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8006-8c7e-e2c8d8e04041" class="bulleted-list"><li style="list-style-type:disc">Static workstations: 3-8 days</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2a2a1ef9-8d73-8043-8dde-cea46f90a0dd" class="numbered-list" start="3"><li><strong><span style="border-bottom:0.05em solid">Availability</span></strong><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8008-8f0a-fe86fa400bcf" class="bulleted-list"><li style="list-style-type:disc">Configure DHCP failover for redundancy</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8049-b3a4-df3aaaaa1a82" class="bulleted-list"><li style="list-style-type:disc">Monitor DHCP server health regularly</li></ul></div></li></ol></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8052-8e4f-ebc808790066" class="block-color-red">add more </p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80e1-aa08-fc9debfe61bc"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80eb-87d8-f859f9b41741" class="">Security (FINISH LATER) </h3></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80df-9ab2-d6305c2111c0"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80fb-ab98-fd3e24ab911b" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

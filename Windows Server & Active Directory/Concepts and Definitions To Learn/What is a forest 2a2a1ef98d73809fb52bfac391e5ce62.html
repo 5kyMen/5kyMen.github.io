@@ -1,0 +1,261 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>What is a forest?</title><style>
+:root {
+  --primary-color: #50241c;
+  --secondary-color: #ffffff;
+  --accent-color: #fcdfbb;
+  --background-color: #f7e2d0;
+  --text-color: #2c1b0d;
+  --border-color: #dddddd;
+  --header-color: #55432e;
+  --section-bg: #b31f1f;
+  --transition-speed: 0.3s;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+  }
+}
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.page-body {
+  background-color: var(--background-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+a, a.visited {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-color);
+  font-size: 0.88em;
+  transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: #f5cdb3;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.page-title {
+  border-bottom-style: solid;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+  transition: color var(--transition-speed);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--header-color);
+  transition: color var(--transition-speed);
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-weight: 600;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(40, 15, 28, 0.3);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figure {
+  margin: 1.25em 0;
+  page-break-inside: avoid;
+}
+
+.link-to-page {
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  font-weight: 500;
+}
+
+.link-to-page a {
+  font-size: 1em;
+}
+
+.link-to-page a:hover {
+}
+
+blockquote {
+  font-size: 1em;
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--primary-color);
+}
+
+.code, code {
+  background: rgba(80, 36, 28, 0.08);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  tab-size: 2;
+  font-family: monospace;
+}
+
+code {
+  color: var(--primary-color);
+}
+
+.code {
+  padding: 1.5em 1em;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+}
+
+table {
+  border-left: none;
+  border-right: none;
+}
+
+th, td {
+  font-weight: normal;
+  padding: 0.25em 0.5em;
+  line-height: 1.5;
+  min-height: 1.5em;
+  text-align: left;
+}
+
+th {
+  color: var(--header-color);
+}
+
+ol, ul {
+  margin: 0;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+}
+
+ul {
+  padding-inline-start: 1.7em;
+}
+
+ol {
+  padding-inline-start: 1.6em;
+}
+
+.page-description {
+  margin-bottom: 2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.sans { font-family: Times, "Times New Roman", serif; }
+
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+@page {
+  margin: 1in;
+}
+</style></head><body>
+<p id="go-back-link" style="margin:1em 0;"><a href="../Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html" style="font-size:1em;">&larr; Go Back</a></p>
+<article id="2a2a1ef9-8d73-809f-b52b-fac391e5ce62" class="page sans"><header><img class="page-cover-image" src="What%20is%20a%20forest/41477_2019_374_Figa_HTML.jpg" style="object-position:center 50%"/><h1 class="page-title" dir="auto">What is a forest?</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-806a-b629-fcdc2974658d" class=""><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/using-the-organizational-domain-forest-model">https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/using-the-organizational-domain-forest-model</a></p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b3-ac93-cdeaeebae2a3" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80e3-82e0-c85d98a289da" class="image"><a href="What%20is%20a%20forest/domain-forest2x-960x852.webp"><img style="width:528px" src="What%20is%20a%20forest/domain-forest2x-960x852.webp"/></a></figure></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-809c-8d70-e71a43bcbe8c" class=""><strong><span style="border-bottom:0.05em solid">What is a Forest?</span></strong></h3></div><div style="display:contents" dir="auto"><p id="2a4a1ef9-8d73-804e-a26a-cd964fa20e94" class=""><br/>T<strong>op-level container</strong> and boundary for Active Directory</p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-809d-b39b-cb11e6224101" class="bulleted-list"><li style="list-style-type:disc">An Active Directory forest (AD forest) is the top level container in AD  that contains: domains, users, computers, and group policies.</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-800a-bad7-e95a10614a84" class="bulleted-list"><li style="list-style-type:disc">A single Active Directory configuration can contain more than one domain, and we call the tier <em>above</em> domain the AD forest. Under each domain, you can have several trees, and it can be tough to see the forest for the trees</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8071-9a0e-ea8e7fec7c4f" class="bulleted-list"><li style="list-style-type:disc">This additional top-level layer creates security challenges and increased potential for exploitation, but it can also mean greater isolation and autonomy when necessary</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-806d-b7e9-ebd072e9974d"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8015-ab23-ce10921ab41d" class=""><a href="https://www.varonis.com/blog/active-directory-forest">https://www.varonis.com/blog/active-directory-forest</a></h3></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8052-bb33-e02bc9bb2b82" class="bulleted-list"><li style="list-style-type:disc">A single AD configuration can contain multiple domains organized under the forest level</li></ul></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-807a-8a2d-fc64038462a3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b0-a0a2-e9e7b1fd6a45" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8023-a240-ecddfc8d250c"/></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8044-a00a-d908255d8d55"/></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807f-b3f6-e59f999b0c4e" class="bulleted-list"><li style="list-style-type:disc"><strong>Organizational Forest</strong> - Standard setup where users and resources are managed together</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807e-8c29-c017ea9b9513" class="bulleted-list"><li style="list-style-type:disc"><strong>Resource Forest</strong> - Separates user accounts from resources into different forests for critical system isolation</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ca-9da7-ffbf21199730" class="bulleted-list"><li style="list-style-type:disc"><strong>Restricted Access Forest</strong> - Completely isolates users and resources with no trust relationships to other forests</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-809b-b8e8-cecab2f8b513"/></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8063-8754-fa122c17cb29" class="bulleted-list"><li style="list-style-type:disc">Single forest design is simpler and generally considered best practice</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80f0-b7ec-c1e50a4ca44d" class="bulleted-list"><li style="list-style-type:disc">Multiple forests multiply complexity and IT costs significantly</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8043-a1fa-ea147809ccb6" class="bulleted-list"><li style="list-style-type:disc">Each additional forest should have its own dedicated IT team for proper <strong>segregation</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8002-ba8e-f75178a6e684" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">Trust relationships</mark> can be established between forests to allow controlled resource sharing</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80d5-a57e-f5fd3b5c5011"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8085-9f9e-f965ca0cb96d" class=""><strong><span style="border-bottom:0.05em solid">Best Practices:</span></strong></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8011-869a-fa0c4e594241" class="bulleted-list"><li style="list-style-type:disc">Fully understand Group Policy Objects (GPOs) and <em>least privilege model</em></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80b0-be56-f470cb3826bb" class="bulleted-list"><li style="list-style-type:disc">Give domain admins separate admin accounts used only when required</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8082-b9dc-cc7afef6b46f" class="bulleted-list"><li style="list-style-type:disc">Ensure true isolation with no unnecessary connections</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-807b-961e-cf4376ff3037" class="bulleted-list"><li style="list-style-type:disc">One forest is <span style="border-bottom:0.05em solid">usually</span> enough </li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80de-9b18-d77698fc5d1c"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80eb-bc66-e113ec1d0c13" class="block-color-red"><a href="https://serveracademy.com/blog/what-is-an-active-directory-forest/">https://serveracademy.com/blog/what-is-an-active-directory-forest/</a></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8023-a93a-f937e0693850" class="">!!! REALLY GOOD GUIDE !!!</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8060-a327-e15b6a668a03" class="block-color-blue"> Summary and Takeaways: </p></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80b7-a5c0-f9d4204896c0" class=""><strong><span style="border-bottom:0.05em solid">Components of an Active Directory Forest</span></strong></h3></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80ee-aa36-e0c2d4517fd5" class="bulleted-list"><li style="list-style-type:disc"><strong>Domains</strong>: The building blocks of a forest. Each domain in a forest can have its own organizational units, user accounts, and network resources.</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8015-af96-efc576b03031" class="bulleted-list"><li style="list-style-type:disc"><strong>Trees</strong>: A grouping of one or more domains that share a contiguous namespace.</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8045-9210-ee7a7f199a11" class="bulleted-list"><li style="list-style-type:disc"><strong>Global Catalog</strong>: A distributed data repository that contains information about every object within the forest. It facilitates searching and locating resources across domains.</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801b-839d-f86bd5f84e37" class="bulleted-list"><li style="list-style-type:disc"><strong>Schema</strong>: Defines the types of objects and the attributes associated with them in the AD database. It ensures consistency across the forest.<div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80fb-bc11-ded32ac47f4d"/></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-8066-b70d-f0e101b5fa01" class=""><strong><span style="border-bottom:0.05em solid">Forest vs. Domain (Website definition) </span></strong></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80a8-8a34-cb47d1ffa0ff" class="">While a domain provides a security and administrative boundary for a group of networked objects (like users and computers), the forest encapsulates these domains. It extends the administrative scope and sets overarching security policies. Understanding this hierarchy is crucial for effective AD management.</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80da-a7a9-d6b123839fbd" class="">In essence, an Active Directory Forest is the cornerstone of a well-structured AD environment. It enables organizations to manage large and diverse networks efficiently, ensuring security and scalability.</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b9-903c-c86c1d348a0d" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80de-9d5a-c580e944e168"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-803d-bcb1-e9003ce22636" class=""><span style="border-bottom:0.05em solid">Creating an Active Directory Forest using PowerShell </span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80fc-906b-fb3de09eb7f1" class=""><span style="border-bottom:0.05em solid">(from website noted above) </span></p></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80f9-aa53-c7120feb8b4f"/></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-808c-8397-f9c400a16c47" class=""><span style="border-bottom:0.05em solid">Needs:</span></p></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8071-85d2-e77b46e0b637" class="bulleted-list"><li style="list-style-type:disc">Windows Server with administrative privileges</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8009-b290-d701a279f664" class="bulleted-list"><li style="list-style-type:disc">Planned domain name for the root domain</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8033-9f3f-dec288abee44"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-804b-a210-dee83b66c510" class=""><span style="border-bottom:0.05em solid">Install AD DS Role</span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b4-af21-c8aaec144053" class="">Install Active Directory Domain Services with management tools: (relative powershell command)</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80b3-9ebc-d7caa9b778ff" class=""><code>Install-WindowsFeature AD-Domain-Services -IncludeManagementTools</code></p></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80bf-b817-c5613c088cd1" class=""><span style="border-bottom:0.05em solid">Deployment Modul</span>e</h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-807c-8e23-fbba4f5e4feb" class="">Import the required deployment module: (relative powershell command)</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8051-8a92-e4b291ff3854" class=""><code>Import-Module ADDSDeployment</code></p></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-800f-8a13-dc7260c0b843" class=""><span style="border-bottom:0.05em solid">create new forest </span></h3></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80ee-a3b5-e7a99e9ca3f4" class="">Replace &quot;yourdomain.com&quot; with your chosen domain name: (relative powershell command)</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8037-939b-c281a76f760c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8094-b8e4-ffc7676994b3" class=""><code>Install-ADDSForest -DomainName &quot;yourdomain.com&quot;</code></p></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-80fd-9fe9-d9b756ff1064" class="">verify by: </h3></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-801b-8b37-c27fd936036e" class="bulleted-list"><li style="list-style-type:disc">Verify AD DS services are running</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80cb-b513-c8325dbb5fbb" class="bulleted-list"><li style="list-style-type:disc">Check Active Directory Users and Computers console for domain structure</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8096-a3a2-fc36254a5c42" class="bulleted-list"><li style="list-style-type:disc">Validate global catalog and DNS functionality</li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-801e-9640-dc37857a186f"/></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8040-ac49-d075f124e797" class="link-to-page"><a href="What%20is%20a%20forest/Forest%20Design%20Models%202a2a1ef98d738040ac49d075f124e797.html">Forest Design Models</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80f3-aceb-e132abe84b7d"/></div><div style="display:contents" dir="auto"><h2 id="2a2a1ef9-8d73-804c-a5f9-e3b86c19f881" class="">Best Practices</h2></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8064-bdef-d6ec08a2dab7" class="bulleted-list"><li style="list-style-type:disc"><strong>Regular Updates</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8017-b856-e69eb80fb90e" class="bulleted-list"><li style="list-style-type:disc">MFA</li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-80f1-8624-f22228ccd51e" class="bulleted-list"><li style="list-style-type:disc"><strong>Monitor</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8011-9075-e1a744ff253c" class="bulleted-list"><li style="list-style-type:disc"><strong>Backup</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="2a2a1ef9-8d73-8009-b390-d3adbc3ddbf3" class="bulleted-list"><li style="list-style-type:disc"><strong>Cleanup</strong></li></ul></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-807a-a8dc-f2a22c60613c"/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
