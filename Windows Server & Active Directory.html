@@ -52,17 +52,43 @@ body {
 }
 
 a, a.visited {
-  color: var(--primary-color);
+  color: #154f65;
   text-decoration: none;
-  border-bottom: 1px dotted var(--primary-color);
+  font-weight: 600;
+  border-bottom: 2px solid #0e3748;
   font-size: 0.88em;
   transition: color var(--transition-speed), border-color var(--transition-speed);
 }
 
 a:hover {
-  color: var(--text-color);
-  background-color: #f5cdb3;
-  border-bottom: 1px solid var(--text-color);
+  color: #256B86;
+  background-color: rgba(26, 92, 139, 0.1);
+  border-bottom: 2px solid #07273d;
+}
+
+a b {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(252, 223, 187, 0.6), rgba(247, 226, 208, 0.8));
+  padding: 1.8px 10px;
+  border: 1px solid #c09779;
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(80, 36, 28, 0.12);
+  transition: all 0.25s ease;
+}
+
+a:hover b {
+  background: linear-gradient(135deg, var(--accent-color), rgba(252, 223, 187, 0.9));
+  border-bottom: 1px solid var(--header-color);
+  box-shadow: 0 3px 8px rgba(19, 23, 80, 0.2);
+  color: var(--header-color);
+}
+
+a:has(b) {
+  border-bottom: none !important;
+  background-color: transparent !important;
 }
 
 .page-title {
@@ -223,6 +249,19 @@ ol {
 
 .sans { font-family: Times, "Times New Roman", serif; }
 
+img.icon, img.bookmark-icon {
+  max-width: 16px;
+  max-height: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+table img {
+  box-shadow: none !important;
+}
+
 @media only print {
   img {
     max-height: 100vh;
@@ -235,4 +274,4 @@ ol {
 }
 </style></head><body>
 <p id="go-back-link" style="margin:1em 0;"><a href="index.html" style="font-size:1em;">&larr; Go Back</a></p>
-<article id="29ea1ef9-8d73-80b9-8ca9-d44444b3f1ee" class="page sans"><header><img class="page-cover-image" src="Windows%20Server%20&amp;%20Active%20Directory/czj73izfq4a71.webp" style="object-position:center 50%"/><h1 class="page-title" dir="auto">Windows Server &amp; Active Directory </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80e1-a7ae-f2195f138297"/></div><div style="display:contents" dir="ltr"><figure id="2a1a1ef9-8d73-80ae-a0ee-c5926deeb8f7" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Install%20Notes%20and%20Documentation%202a1a1ef98d7380aea0eec5926deeb8f7.html">Install Notes and Documentation </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8079-95c8-daca71aa10f5"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-8084-98b8-c23e40127a03" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html">Concepts and Definitions To Learn </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8073-b756-e64dacef1fec"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-8087-a4d7-d65f73f2e80d" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Becoming%20a%20PowerShell%20God%2029ea1ef98d738087a4d7d65f73f2e80d.html">Becoming a PowerShell God </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80c0-bc4e-f310a58d3d67"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-807d-9e15-ca676bfd6b49" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Windows%20Server%20Command%20Reference%2029ea1ef98d73807d9e15ca676bfd6b49.html">Windows Server Command Reference</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8067-8f8a-cc4bf77ee8a0"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-804a-a34d-efdc5526ec89" class="block-color-default_background"><span style="border-bottom:0.05em solid">Resources</span></h3></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8002-971f-e9e554542d08" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Possible%20courses%202a2a1ef98d738002971fe9e554542d08.html">Possible courses </a></figure></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80f6-8b07-dea3f8368988" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/YouTube%20Videos%202a2a1ef98d7380f68b07dea3f8368988.html">YouTube Videos </a></figure></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80f3-a5ca-d3e2b68f25e8" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Cheatsheets%20and%20Guides%202a2a1ef98d7380f3a5cad3e2b68f25e8.html">Cheatsheets and Guides </a></figure></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80bf-b762-fe815f9fd6c5" class="">-<a href="https://github.com/awesome-foss/awesome-sysadmin">https://github.com/awesome-foss/awesome-sysadmin</a> </p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8060-a891-fcd821b8e03d" class=""><a href="https://nuccdc.gitlab.io/team/documentation/windows/index.html">https://nuccdc.gitlab.io/team/documentation/windows/index.html</a></p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<article id="29ea1ef9-8d73-80b9-8ca9-d44444b3f1ee" class="page sans"><header><img class="page-cover-image" src="Windows%20Server%20&amp;%20Active%20Directory/czj73izfq4a71.webp" style="object-position:center 50%"/><h1 class="page-title" dir="auto">Windows Server &amp; Active Directory </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80e1-a7ae-f2195f138297"/></div><div style="display:contents" dir="ltr"><figure id="2a1a1ef9-8d73-80ae-a0ee-c5926deeb8f7" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Install%20Notes%20and%20Documentation%202a1a1ef98d7380aea0eec5926deeb8f7.html">Install Notes and Documentation </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8079-95c8-daca71aa10f5"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-8084-98b8-c23e40127a03" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Concepts%20and%20Definitions%20To%20Learn%2029ea1ef98d73808498b8c23e40127a03.html">Concepts and Definitions To Learn </a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8073-b756-e64dacef1fec"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-8087-a4d7-d65f73f2e80d" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Becoming%20a%20PowerShell%20God%2029ea1ef98d738087a4d7d65f73f2e80d.html">Powershell Commands</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-80c0-bc4e-f310a58d3d67"/></div><div style="display:contents" dir="ltr"><figure id="29ea1ef9-8d73-807d-9e15-ca676bfd6b49" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Windows%20Server%20Command%20Reference%2029ea1ef98d73807d9e15ca676bfd6b49.html">Windows Server Command Reference</a></figure></div><div style="display:contents" dir="auto"><hr id="2a2a1ef9-8d73-8067-8f8a-cc4bf77ee8a0"/></div><div style="display:contents" dir="auto"><h3 id="2a2a1ef9-8d73-804a-a34d-efdc5526ec89" class="block-color-default_background"><span style="border-bottom:0.05em solid">Resources</span></h3></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-8002-971f-e9e554542d08" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Possible%20courses%202a2a1ef98d738002971fe9e554542d08.html">Possible courses </a></figure></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80f6-8b07-dea3f8368988" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/YouTube%20Videos%202a2a1ef98d7380f68b07dea3f8368988.html">YouTube Videos </a></figure></div><div style="display:contents" dir="ltr"><figure id="2a2a1ef9-8d73-80f3-a5ca-d3e2b68f25e8" class="link-to-page"><a href="Windows%20Server%20&amp;%20Active%20Directory/Cheatsheets%20and%20Guides%202a2a1ef98d7380f3a5cad3e2b68f25e8.html">Cheatsheets and Guides </a></figure></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-80bf-b762-fe815f9fd6c5" class="">-<a href="https://github.com/awesome-foss/awesome-sysadmin">https://github.com/awesome-foss/awesome-sysadmin</a> </p></div><div style="display:contents" dir="auto"><p id="2a2a1ef9-8d73-8060-a891-fcd821b8e03d" class=""><a href="https://nuccdc.gitlab.io/team/documentation/windows/index.html">https://nuccdc.gitlab.io/team/documentation/windows/index.html</a></p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

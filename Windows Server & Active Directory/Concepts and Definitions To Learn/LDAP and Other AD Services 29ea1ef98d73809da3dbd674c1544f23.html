@@ -52,17 +52,43 @@ body {
 }
 
 a, a.visited {
-  color: var(--primary-color);
+  color: #154f65;
   text-decoration: none;
-  border-bottom: 1px dotted var(--primary-color);
+  font-weight: 600;
+  border-bottom: 2px solid #0e3748;
   font-size: 0.88em;
   transition: color var(--transition-speed), border-color var(--transition-speed);
 }
 
 a:hover {
-  color: var(--text-color);
-  background-color: #f5cdb3;
-  border-bottom: 1px solid var(--text-color);
+  color: #256B86;
+  background-color: rgba(26, 92, 139, 0.1);
+  border-bottom: 2px solid #07273d;
+}
+
+a b {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(252, 223, 187, 0.6), rgba(247, 226, 208, 0.8));
+  padding: 1.8px 10px;
+  border: 1px solid #c09779;
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(80, 36, 28, 0.12);
+  transition: all 0.25s ease;
+}
+
+a:hover b {
+  background: linear-gradient(135deg, var(--accent-color), rgba(252, 223, 187, 0.9));
+  border-bottom: 1px solid var(--header-color);
+  box-shadow: 0 3px 8px rgba(19, 23, 80, 0.2);
+  color: var(--header-color);
+}
+
+a:has(b) {
+  border-bottom: none !important;
+  background-color: transparent !important;
 }
 
 .page-title {
@@ -230,6 +256,10 @@ img.icon, img.bookmark-icon {
   border-radius: 0;
   display: inline;
   vertical-align: text-bottom;
+}
+
+table img {
+  box-shadow: none !important;
 }
 
 @media only print {
